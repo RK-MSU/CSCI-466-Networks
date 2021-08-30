@@ -1,0 +1,2127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  
+   <meta name="Robots" content="index,follow" />  
+  
+  
+  <!-- highscalability -->
+
+  <link rel="shortcut icon" href="favicon.png" type="image/png" />
+
+  <link id="primaryStylesheet" rel="stylesheet" type="text/css" href="common.css%3FstyleId=512250&amp;RK=1552578797277&amp;CE=75.css"/>
+  
+  <link id="slideShowStylesheet" rel="stylesheet" type="text/css" href="squarespace-gallery-slideshow.css%3FCE=75.css"/>
+  
+  
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/HighScalability" />
+  
+  
+  <!-- Google Web Fonts -->
+  <script type="text/javascript">
+    	WebFontConfig = {};
+  
+   
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <script type="text/javascript" src="yahoo-dom-event.js%3FCE=75"></script>
+<script type="text/javascript" src="connection_core-min.js%3FCE=75"></script>
+<script type="text/javascript" src="json-min.js%3FCE=75"></script>
+<script type="text/javascript" src="animation-min.js%3FCE=75"></script>
+<script type="text/javascript" src="selector.js%3FCE=75"></script>
+<script type="text/javascript" src="element.js%3FCE=75"></script>
+<script type="text/javascript" src="global.js%3FCE=75"></script>
+<script type="text/javascript" src="lightbox.js%3FCE=75"></script>
+<script type="text/javascript" src="api.js%3FCE=75"></script>
+<script type="text/javascript" src="base64.js%3FCE=75"></script>
+<script type="text/javascript" src="census.js%3FCE=75"></script>
+<script type="text/javascript" src="yui2-yui3-bridge.js%3FCE=75"></script>
+<script type="text/javascript" src="squarespace-gallery-slideshow.js%3FCE=75"></script>
+
+
+  <script type="text/javascript">
+  // <![CDATA[
+
+    Squarespace.Constants.SS_AUTHKEY = encodeURIComponent("");
+    Squarespace.Constants.WEBSITE_TITLE =  "High Scalability"; 
+    
+     Squarespace.Constants.CURRENT_MODULE_ID = "4867632"; 
+    
+    
+    
+    Squarespace.Constants.ADMINISTRATION_UI =  false; 
+    
+    
+     Squarespace.Constants.OBJECT_PERMALINK = "http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html"; 
+    Squarespace.Constants.CORE_APPLICATION_DOMAIN = "squarespace.com";
+    Squarespace.Constants.CORE_V6_APPLICATION_DOMAIN = "squarespace.com";
+    Squarespace.Constants.V5_FRONTSITE = "http://www.squarespace.com";
+    Squarespace.Constants.WEBSITE_ID = "426227";
+
+    
+
+    
+
+    
+
+  // ]]>
+  </script>
+
+      <title>Latency is Everywhere and it Costs You Sales - How to Crush&nbsp;it - High Scalability - </title>
+    <meta property="og:title" content="Latency is Everywhere and it Costs You Sales - How to Crush&nbsp;it - High Scalability - " /> 
+  
+
+      <meta property="og:description" content=" Update 8 : The Cost of Latency  by James Hamilton. James summarizing some latency info from   Stev..." />
+  
+
+  
+
+  <!-- End Heading -->
+
+  
+
+  <script type="text/javascript" src="cookie-min.js"></script>
+  <script type="text/javascript" src="eu-cookie-policy.js"></script>
+
+</head>
+
+<body  id="modulePage4867632"   class="objectId5337721"  >
+
+  <script type="text/javascript">
+  YAHOO.util.Event.onDOMReady(function() {
+    if (document.location.href.indexOf("SSLogoutOk=true") != -1) {
+      new Squarespace.FixedPositionTip("Logout Successful", "You have been successfully logged out.", { xMargin: 15, yMargin: 15, icon: "/universal/images/helptip-info.png", orientation: "upper-right", viewportFixed: true, autoHide: 1800 }).show();
+    }
+  });
+</script>
+
+    
+
+  <script type="text/javascript">
+    YAHOO.util.Event.onDOMReady(function() { new Squarespace.Census.hit(); } );
+  </script>
+
+  <script type="text/javascript">
+    YAHOO.util.Event.addListener(document, "keyup", function (e) { if (!e) { e = event; } if (e.keyCode == 27) { document.location.href = "/login/?returnUrl=%2Flatency-everywhere-and-it-costs-you-sales-how-crush-it"; } });
+  </script>
+
+
+
+
+  
+
+  <div id="canvasWrapper"><div id="canvas">
+  
+  
+
+  <div id="pageHeaderWrapper"><div id="pageHeader">
+
+      <div id="navigationTop"><div id="navigationTop-sectionContent2191792" class="horizontalNavigationBar"><ul class="content-navigation">
+    
+  <li class="module active-module  " id="navigationTop-moduleContentWrapper4867632">
+
+    <div id="navigationTop-moduleContent4867632">
+
+              <a id="navigationTop-moduleLink4867632" class=" " href="http://highscalability.com/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper5498762">
+
+    <div id="navigationTop-moduleContent5498762">
+
+              <a id="navigationTop-moduleLink5498762" class="offsite-link " href="https://smile.amazon.com/Explain-Cloud-Like-Im-10-ebook/dp/B0765C4SNR" onclick="this.target='new';"><span>Explain the Cloud Like I&#39;m 10</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper15178301">
+
+    <div id="navigationTop-moduleContent15178301">
+
+              <a id="navigationTop-moduleLink15178301" class=" " href="http://highscalability.com/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850438">
+
+    <div id="navigationTop-moduleContent4850438">
+
+              <a id="navigationTop-moduleLink4850438" class=" " href="http://highscalability.com/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper10576114">
+
+    <div id="navigationTop-moduleContent10576114">
+
+              <a id="navigationTop-moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper19697312">
+
+    <div id="navigationTop-moduleContent19697312">
+
+              <a id="navigationTop-moduleLink19697312" class="offsite-link " href="https://www.patreon.com/toddhoff" onclick="this.target='new';"><span>Support in Patreon</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850431">
+
+    <div id="navigationTop-moduleContent4850431">
+
+              <a id="navigationTop-moduleLink4850431" class=" " href="http://highscalability.com/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850400">
+
+    <div id="navigationTop-moduleContent4850400">
+
+              <a id="navigationTop-moduleLink4850400" class=" " href="http://highscalability.com/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4850388">
+
+    <div id="navigationTop-moduleContent4850388">
+
+              <a id="navigationTop-moduleLink4850388" class=" " href="http://highscalability.com/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper5861345">
+
+    <div id="navigationTop-moduleContent5861345">
+
+              <a id="navigationTop-moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper18971493">
+
+    <div id="navigationTop-moduleContent18971493">
+
+              <a id="navigationTop-moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper18971509">
+
+    <div id="navigationTop-moduleContent18971509">
+
+              <a id="navigationTop-moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper19028422">
+
+    <div id="navigationTop-moduleContent19028422">
+
+              <a id="navigationTop-moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper4847294">
+
+    <div id="navigationTop-moduleContent4847294">
+
+              <a id="navigationTop-moduleLink4847294" class=" " href="http://highscalability.com/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationTop-moduleContentWrapper19700860">
+
+    <div id="navigationTop-moduleContent19700860">
+
+              <a id="navigationTop-moduleLink19700860" class="offsite-link " href="https://www.amazon.com/shop/highscal" onclick="this.target='new';"><span>Amazon Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  </ul><br class="clearer"/></div></div>
+
+    
+        
+      
+  
+      <div id="bannerAreaWrapper"><div id="bannerArea">
+
+        
+        <div id="bannerWrapper">
+          <a href="http://highscalability.com/"><img id="banner" src="HSBannerTrebuchet.jpg" alt="High Scalability" title="High Scalability"/></a>
+        </div>  
+
+      
+      
+      </div></div>
+    
+    
+    
+
+      <div id="navigationBottom"><div id="navigationBottom-sectionContent2191792" class="horizontalNavigationBar"><ul class="content-navigation">
+    
+  <li class="module active-module  " id="navigationBottom-moduleContentWrapper4867632">
+
+    <div id="navigationBottom-moduleContent4867632">
+
+              <a id="navigationBottom-moduleLink4867632" class=" " href="http://highscalability.com/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper5498762">
+
+    <div id="navigationBottom-moduleContent5498762">
+
+              <a id="navigationBottom-moduleLink5498762" class="offsite-link " href="https://smile.amazon.com/Explain-Cloud-Like-Im-10-ebook/dp/B0765C4SNR" onclick="this.target='new';"><span>Explain the Cloud Like I&#39;m 10</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper15178301">
+
+    <div id="navigationBottom-moduleContent15178301">
+
+              <a id="navigationBottom-moduleLink15178301" class=" " href="http://highscalability.com/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850438">
+
+    <div id="navigationBottom-moduleContent4850438">
+
+              <a id="navigationBottom-moduleLink4850438" class=" " href="http://highscalability.com/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper10576114">
+
+    <div id="navigationBottom-moduleContent10576114">
+
+              <a id="navigationBottom-moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper19697312">
+
+    <div id="navigationBottom-moduleContent19697312">
+
+              <a id="navigationBottom-moduleLink19697312" class="offsite-link " href="https://www.patreon.com/toddhoff" onclick="this.target='new';"><span>Support in Patreon</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850431">
+
+    <div id="navigationBottom-moduleContent4850431">
+
+              <a id="navigationBottom-moduleLink4850431" class=" " href="http://highscalability.com/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850400">
+
+    <div id="navigationBottom-moduleContent4850400">
+
+              <a id="navigationBottom-moduleLink4850400" class=" " href="http://highscalability.com/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4850388">
+
+    <div id="navigationBottom-moduleContent4850388">
+
+              <a id="navigationBottom-moduleLink4850388" class=" " href="http://highscalability.com/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper5861345">
+
+    <div id="navigationBottom-moduleContent5861345">
+
+              <a id="navigationBottom-moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper18971493">
+
+    <div id="navigationBottom-moduleContent18971493">
+
+              <a id="navigationBottom-moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper18971509">
+
+    <div id="navigationBottom-moduleContent18971509">
+
+              <a id="navigationBottom-moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper19028422">
+
+    <div id="navigationBottom-moduleContent19028422">
+
+              <a id="navigationBottom-moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper4847294">
+
+    <div id="navigationBottom-moduleContent4847294">
+
+              <a id="navigationBottom-moduleLink4847294" class=" " href="http://highscalability.com/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="navigationBottom-moduleContentWrapper19700860">
+
+    <div id="navigationBottom-moduleContent19700860">
+
+              <a id="navigationBottom-moduleLink19700860" class="offsite-link " href="https://www.amazon.com/shop/highscal" onclick="this.target='new';"><span>Amazon Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  </ul><br class="clearer"/></div></div>
+
+
+  </div></div>
+  
+  
+
+  
+
+  
+  <div id="pageBodyWrapper"><div id="pageBody">
+  
+  <div id="sidebar1Wrapper" class="verticalNavigationBarWrapper"><div class="iw-vnb1"><div class="iw-vnb2"><div class="iw-vnb3"><div class="iw-vnb4"><div id="sidebar1" class="verticalNavigationBar">
+
+  
+
+    <div id="sectionContent2251797" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4876569" class="widget-wrapper  widget-type-search"><div id="moduleContent4876569">
+
+
+<!-- <form method="get" action="/display/Search">
+	<div class="search-form-pt-wrapper">
+	  <div class="search-form-pt">
+	    <span class="queryFieldWrapper"><input type="text" class="text queryField" name="searchQuery" value=""/></span>
+	    <span class="queryButtonWrapper"><input type="submit" class="button queryButton" value="&raquo;"/></span>
+	    <input type="hidden" name="moduleId" value="4876569"/>
+	    <br class="clearer"/>
+	  </div>
+	</div>
+</form> -->
+
+<form method="get" action="http://highscalability.com/display/Search">
+	<input type="hidden" name="moduleId" value="4876569"/>
+	<table class="search-form-pt-wrapper search-form-table" border="0" cellpadding="0" cellspacing="0">
+		<tr class="search-form-pt search-form-row">
+			<td class="queryFieldCell search-form-cell">
+				<span class="queryFieldWrapper">
+					<input type="text" class="text queryField" name="searchQuery" value=""/>
+				</span>
+			</td>
+			<td class="queryButtonCell search-form-cell">
+				<span class="queryButtonWrapper">
+					<input type="submit" class="button queryButton" value="&rarr;"/>
+				</span>
+			</td>
+		</tr>
+	</table> 
+</form></div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2191792" class="sectionWrapper promotedContainer "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+       <div class="caption">Top</div> 
+
+      
+        
+          <ul class="content-navigation">
+  <li class="module active-module  " id="moduleContentWrapper4867632">
+
+    <div id="moduleContent4867632">
+
+              <a id="moduleLink4867632" class=" " href="http://highscalability.com/" ><span>Home</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper5498762">
+
+    <div id="moduleContent5498762">
+
+              <a id="moduleLink5498762" class="offsite-link " href="https://smile.amazon.com/Explain-Cloud-Like-Im-10-ebook/dp/B0765C4SNR" onclick="this.target='new';"><span>Explain the Cloud Like I&#39;m 10</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper15178301">
+
+    <div id="moduleContent15178301">
+
+              <a id="moduleLink15178301" class=" " href="http://highscalability.com/all-time-favorites/" ><span>All Time Favorites</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850438">
+
+    <div id="moduleContent4850438">
+
+              <a id="moduleLink4850438" class=" " href="http://highscalability.com/blog/category/example" ><span>Real Life Architectures</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper10576114">
+
+    <div id="moduleContent10576114">
+
+              <a id="moduleLink10576114" class=" " href="http://highscalability.squarespace.com/blog/category/strategy" ><span>Strategies</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper19697312">
+
+    <div id="moduleContent19697312">
+
+              <a id="moduleLink19697312" class="offsite-link " href="https://www.patreon.com/toddhoff" onclick="this.target='new';"><span>Support in Patreon</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850431">
+
+    <div id="moduleContent4850431">
+
+              <a id="moduleLink4850431" class=" " href="http://highscalability.com/advertising/" ><span>Advertising</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850400">
+
+    <div id="moduleContent4850400">
+
+              <a id="moduleLink4850400" class=" " href="http://highscalability.com/start-here/" ><span>Start Here</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4850388">
+
+    <div id="moduleContent4850388">
+
+              <a id="moduleLink4850388" class=" " href="http://highscalability.com/contact/" ><span>contact</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper5861345">
+
+    <div id="moduleContent5861345">
+
+              <a id="moduleLink5861345" class=" " href="http://feeds.feedburner.com/HighScalability" ><span>RSS</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper18971493">
+
+    <div id="moduleContent18971493">
+
+              <a id="moduleLink18971493" class=" " href="https://twitter.com/highscal" ><span>Twitter</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper18971509">
+
+    <div id="moduleContent18971509">
+
+              <a id="moduleLink18971509" class=" " href="http://www.facebook.com/pages/Highscalability/441249225918692" ><span>Facebook</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper19028422">
+
+    <div id="moduleContent19028422">
+
+              <a id="moduleLink19028422" class=" " href="https://plus.google.com/b/116966782604206517628/116966782604206517628/posts" ><span>G+</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4847294">
+
+    <div id="moduleContent4847294">
+
+              <a id="moduleLink4847294" class=" " href="http://highscalability.com/all-posts/" ><span>All Posts</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper19700860">
+
+    <div id="moduleContent19700860">
+
+              <a id="moduleLink19700860" class="offsite-link " href="https://www.amazon.com/shop/highscal" onclick="this.target='new';"><span>Amazon Store</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+</ul>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2248744" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+       <div class="caption">Recent Posts</div> 
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4867742" class="widget-wrapper  widget-type-journalarchive"><div id="moduleContent4867742">
+
+
+
+
+
+
+
+  <ul class="archive-item-list-pt">
+     <li><a href="http://highscalability.com/blog/2021/8/2/evolution-of-search-engines-architecture-algolia-new-search.html">Evolution of search engines architecture - Algolia New Search Architecture Part 1</a></li>  <li><a href="http://highscalability.com/blog/2021/7/15/sponsored-post-pinecone-kinsta-bridgecrew-ip2location-stackh.html">Sponsored Post: Pinecone, Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li>  <li><a href="http://highscalability.com/blog/2021/6/29/sponsored-post-pinecone-kinsta-bridgecrew-ip2location-stackh.html">Sponsored Post: Pinecone, Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li>  <li><a href="http://highscalability.com/blog/2021/6/25/stuff-the-internet-says-on-scalability-for-june-25th-2021.html">Stuff The Internet Says On Scalability For June 25th, 2021</a></li>  <li><a href="http://highscalability.com/blog/2021/6/8/sponsored-post-pinecone-kinsta-bridgecrew-ip2location-stackh.html">Sponsored Post: Pinecone, Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li>  <li><a href="http://highscalability.com/blog/2021/6/8/linux-kernel-vs-memory-fragmentation-part-i.html">Linux Kernel vs. Memory Fragmentation (Part I)</a></li>  <li><a href="http://highscalability.com/blog/2021/5/18/sponsored-post-failover-conf-kinsta-bridgecrew-ip2location-s.html">Sponsored Post: Failover Conf!, Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li>  <li><a href="http://highscalability.com/blog/2021/4/30/stuff-the-internet-says-on-scalability-for-april-30th-2021.html">Stuff The Internet Says On Scalability For April 30th, 2021</a></li>  <li><a href="http://highscalability.com/blog/2021/4/7/sponsored-post-failover-conf-kinsta-bridgecrew-ip2location-s.html">Sponsored Post: Failover Conf!, Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li>  <li><a href="http://highscalability.com/blog/2021/3/18/sponsored-post-kinsta-bridgecrew-ip2location-stackhawk-inter.html">Sponsored Post: Kinsta, Bridgecrew, IP2Location, StackHawk, InterviewCamp.io, Educative, Stream, Fauna, Triplebyte</a></li> 
+  </ul>
+
+
+
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+  
+
+</div></div></div></div></div></div>
+  <div id="sidebar2Wrapper" class="verticalNavigationBarWrapper"><div class="iw-vnb1"><div class="iw-vnb2"><div class="iw-vnb3"><div class="iw-vnb4"><div id="sidebar2" class="verticalNavigationBar">
+
+  
+
+    <div id="sectionContent2249261" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4869210" class="widget-wrapper  widget-type-page"><div id="moduleContent4869210">
+
+
+
+
+
+  <a href="https://www.pinecone.io/?utm_medium=link&utm_source=high-scalability&utm_campaign=sponsored">
+     <img width="125" height="125" src="http://highscalability.com/storage/High&#32;Scalability&#32;Ad&#32;2.jpg">
+  </a>
+  
+  
+  <a rel="nofollow" href="https://getstream.io/blog/maker-account/?utm_medium=promoted_newsletter&utm_source=highscalability">
+     <img width="125" height="125" src="HS_Ad_2_125.jpg">
+  </a>
+  
+  <a href="https://loadzilla.net">
+     <img width="125" height="125" src="LoadzillaLogo125X125.jpg">
+  </a>
+  
+  <a href="https://ipinsight.io">
+     <img width="125" height="125" src="http://highscalability.com/storage/2&#32;1.png">
+  </a>
+  
+  <a href="https://bridgecrew.io/?utm_medium=sponsorednewsletter&utm_source=highscalability&utm_campaign=q121&utm_content=codified-cloud-security">
+     <img width="125" height="125" src="highscalabilityv2.jpg">
+  </a>
+  
+  <a href="https://www.ip2location.com/?utm_campaign=highscalability&utm_medium=ad&utm_source=highscalability">
+     <img width="125" height="125" src="ip2location-highscalability.png">
+  </a>
+  
+  <a href="https://www.stackhawk.com/product?utm_source=High%20Scalability">
+     <img width="125" height="125" src="http://highscalability.com/storage/Add&#32;AppSec&#32;Testing&#32;to&#32;Your&#32;CI&#32;Pipeline&#32;-&#32;B&#32;-&#32;125x125.jpg">
+  </a>
+  
+  <a href="http://interviewcamp.io/">
+     <img width="125" height="125" alt="coding interview preparation course" src="interviewcamp125.png">
+  </a>
+  
+  <a href="https://dashboard.fauna.com/accounts/register?utm_source=HighScalability&utm_medium=paid-advertising&utm_campaign=Fall19Ads-HighScalability">
+     <img src="125x125-javascript.png">
+  </a>
+  
+  <a href="https://www.educative.io/scalability-system-design">
+     <img src="scalability-track-highscalability.png">
+  </a>
+  
+  <a href="https://triplebyte.com/?ref=hs_apr18_c2">
+     <img src="20180109_hs_125x125.png">
+  </a>
+  
+  
+  <a href="http://highscalability.com/advertising">advertise</A>
+  </center>
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2191793" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <ul class="content-navigation">
+  <li class="module   " id="moduleContentWrapper4708561">
+
+    <div id="moduleContent4708561">
+
+              <a id="moduleLink4708561" class=" " href="http://highscalability.com/login/?returnUrl=%2Flatency-everywhere-and-it-costs-you-sales-how-crush-it" ><span>Login</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+
+  <li class="module   " id="moduleContentWrapper4869034">
+
+    <div id="moduleContent4869034">
+
+              <a id="moduleLink4869034" class=" " href="http://highscalability.com/register/" ><span>Register</span></a>
+      
+
+      
+
+    </div>
+
+  </li>
+
+</ul>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+    <div id="sectionContent2248734" class="sectionWrapper  "><div class="iw-s1"><div class="iw-s2"><div class="iw-s3"><div class="iw-s4"><div class="section">
+
+      
+
+      
+        
+          <div class="content-passthrough"><div id="moduleContentWrapper4867711" class="widget-wrapper  widget-type-rss-syndicate"><div id="moduleContent4867711">
+
+
+
+  <ul class="feed-list-inline">
+    
+          <li><a href="http://feeds.feedburner.com/HighScalability" class="feed-link">High Scalability RSS</a></li>
+        
+          <li><a href="http://highscalability.com/blog/rss-comments.xml" class="feed-link">High Scalability Comments RSS</a></li>
+        
+  </ul>
+
+</div></div></div>
+
+        
+
+      
+  
+    </div></div></div></div></div></div>
+
+  
+
+  
+
+</div></div></div></div></div></div>
+  
+  
+
+  <div id="contentWrapper"><div id="content">
+    
+          
+    
+
+
+  
+
+  
+  
+      
+  <div class="journal-entry-navigation">
+
+    
+       <a class="journal-entry-navigation-prev" href="http://highscalability.com/blog/2009/7/27/handle-700-percent-more-requests-using-squid-and-apc-cache.html">&laquo; Handle 700 Percent More Requests Using Squid and APC Cache</a> | 
+      <a class="journal-entry-navigation-main" href="http://highscalability.com/blog/">Main</a>
+       | <a class="journal-entry-navigation-next" href="http://highscalability.com/blog/2009/7/21/paper-parallelizing-the-web-browser.html">Paper: Parallelizing the Web Browser &raquo;</a> 
+
+    
+
+  </div>
+
+
+  
+  
+  <div class="single-journal-entry-wrapper">
+    
+
+
+<div class="journal-entry-wrapper post-text authored-by-toddhoff category-latency category-strategy">
+<div id="item5337721" class="journal-entry">
+
+  <div class="journal-entry-float-day"><span class="name">Saturday</span></div><div class="journal-entry-float-date"><span class="month">Jul</span><span class="date">25</span><span class="year">2009</span></div>
+  
+  
+  
+  <div class="journal-entry-text">
+  
+      
+      <h2 class="title">
+    
+        
+    
+        <a class="journal-entry-navigation-current" href="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html">Latency is Everywhere and it Costs You Sales - How to Crush&nbsp;it</a>  
+     
+         
+    
+      </h2>
+      
+       <div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">   <img title="Date" alt="Date" class="inline-icon date-icon" rel="smalllight" src="transparent.png" />Saturday, July 25, 2009 at 5:54AM</span> </div> 
+
+    
+  
+      
+      <div class="body">
+  
+        
+        
+        
+          <p><strong>Update 8</strong>: <a class="TitleLinkStyle" rel="bookmark" href="http://perspectives.mvdirona.com/2009/10/31/TheCostOfLatency.aspx">The Cost of Latency</a>&nbsp;by James Hamilton. James summarizing some latency info from <span style="font-family: Calibri; color: #000000; font-size: small;">&nbsp;</span><span style="font-family: Calibri; color: #0000ff; font-size: small;"><a href="http://stevesouders.com/">Steve Souder</a>, <span style="font-family: Calibri; color: #0000ff; font-size: small;"><a href="http://glinden.blogspot.com/">Greg Linden</a>, and <span style="font-family: Calibri; color: #0000ff; font-size: small;"><a href="http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html">Marissa Mayer</a>. </span></span></span>&nbsp;<em>Speed [is] an undervalued and under-discussed asset on the web.</em></p>
+<p><strong>Update 7:</strong> <a href="http://mysqldba.blogspot.com/2008/09/how-do-you-know-when-you-need-more.html">How do you know when you need more memcache servers?</a>. Dathan Pattishall talks about using memcache not to scale, but to reduce latency and reduce I/O spikes, and how to use stats to know when more servers are needed.<br /><strong>Update 6:</strong> <a href="http://www.nytimes.com/2009/07/24/business/24trading.html?_r=1&amp;hp">Stock Traders Find Speed Pays, in Milliseconds</a>. Goldman Sachs is making record profits off a <a href="http://imgur.com/YeWxA.png">500 millisecond</a> trading advantage. Yes, latency matters. As an interesting aside, Libet found 500 msecs is about the time it takes the brain to weave together an experience of consciousness from all our sensor inputs.<br /><strong>Update 5:</strong> <a href="http://blip.tv/file/2290648">Shopzilla's Site Redo - You Get What You Measure</a>. At the <a href="http://radar.oreilly.com/2009/07/velocity-making-your-site-fast.html">Velocity</a> conference Phil Dixon, from Shopzilla, presented data showing a 5 second speed up resulted in a 25% increase in page views, a 10% increase in revenue, a 50% reduction in hardware, and a 120% increase traffic from Google. Built a new service oriented Java based stack. Keep it simple. Quality is a design decision. Obsessively easure everything. Used agile and built the site one page at a time to get feedback. Use proxies to incrementally expose users to new pages for A/B testing. Oracle Coherence Grid for caching. 1.5 second page load SLA. 650ms server side SLA. Make 30 parallel calls on server. 100 million requests a day. SLAs measure 95th percentile, averages not useful. Little things make a big difference.<br /><strong>Update 4:</strong> <a href="http://radar.oreilly.com/2009/06/bing-and-google-agree-slow-pag.html">Slow Pages Lose Users</a>. At the Velocity Conference Jake Brutlag (Google Search) and Eric Schurman (Microsoft Bing) presented study data showing delays under half a second impact business metrics and delay costs increase over time and persist. Page weight not key. Progressive rendering helps a lot.<br /><strong>Update 3:</strong> <a href="http://natishalom.typepad.com/nati_shaloms_blog/2008/12/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it-my-personal-take-away.html">Nati Shalom's Take</a> on this article.  Lots of good stuff on designing architectures for latency minimization.<br /><strong>Update 2:</strong> Why Latency <a href="http://www.ll.mit.edu/HPEC/agendas/proc04/powerpoints/Banquet%20and%20Keynote/patterson_keynote.ppt">Lags Bandwidth,  and What it Means to Computing</a> by David Patterson. Reasons: Moore's Law helps BW more than latency; Distance limits latency; Bandwidth easier to sell; Latency help BW, but not vice versa; Bandwidth hurts latency; OS overhead hurts latency more than BW. Three ways to cope: Caching, Replication, Prediction. We haven't talked about prediction. Games use prediction, i.e, project where a character will go, but it's not a strategy much used in websites.<br /><strong>Update:</strong> <a href="http://www.ibm.com/developerworks/linux/library/j-zerocopy/">Efficient data transfer through zero copy</a>. Copying data kills. This excellent article explains the path data takes through the OS and how to reduce the number of copies to the big zero.<br /><br />Latency matters.  Amazon found every 100ms of latency cost them 1% in sales. Google found an extra .5 seconds in search page generation time <a href="http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html">dropped traffic by 20%</a>. A broker could lose <a href="http://www.tabbgroup.com/PublicationDetail.aspx?PublicationID=346">$4 million in revenues per millisecond</a> if their electronic trading platform is 5 milliseconds behind the competition.</p>
+<p>The Amazon results were reported by <a href="http://glinden.blogspot.com/">Greg Linden</a> in his presentation <a href="http://home.blarg.net/~glinden/StanfordDataMining.2006-11-29.ppt">Make Data Useful</a>. In one of Greg's slides Google VP Marissa Mayer, in reference to the Google results, is quoted as saying "<strong>Users really respond to speed</strong>." And everyone wants responsive users. Ka-ching!  People hate waiting and they're repulsed by seemingly small delays.  <br /><br />The less interactive a site becomes the more likely users are to click away and do something else. Latency is the mother of interactivity. Though it's possible through various UI techniques to make pages subjectively feel faster, slow sites generally lead to <a href="http://www.kaushik.net/avinash/2008/01/measuring-online-engagement-what-role-does-web-analytics-play.html">higher customer defection rates</a>, which lead to lower conversation rates, which results in lower sales. Yet for some reason latency isn't a topic talked a lot about for web apps. We talk a lot about about building high-capacity sites, but very little about how to build low-latency sites. We apparently do so at the expense of our immortal bottom line. <br /><br />I wondered if latency went to zero if sales would be infinite? But alas, as Dan Pritchett says, <a href="http://www.addsimplicity.com/adding_simplicity_an_engi/2007/02/latency_exists_.html">Latency Exists, Cope!</a>. So we can't hide the "latency problem" by appointing a Latency Czar to conduct a nice little war on latency. Instead, we need to learn how to minimize and manage latency. It turns out a lot of problems are better solved that way.<br /><br />How do we recover that which is most meaningful--sales--and build low-latency systems?<br /><br />I'm excited that the topic of latency came up. There are a few good presentations on this topic I've been dying for a chance to reference. And latency is one of those quantifiable qualities that takes real engineering to create. A lot of what we do is bolt together other people's toys. Building high-capacity low-latency system takes mad skills. Which is fun. And which may also account for why we see latency a core design skill in real-time and market trading type systems, but not web systems. We certainly want our nuclear power plant <a href="http://content.answers.com/main/content/wp/en/thumb/2/2f/300px-Chernobyl_Disaster.jpg"> plutonium fuel rod lowering hardware</a> to respond to interrupts with sufficient alacrity. While less serious, trading companies are always in a technological arms race to create lower latency systems. He with the fastest system creates a sort of <a href="http://www.economicprincipals.com/issues/06.09.10.html">private wire</a> for receiving and acting on information faster than everyone else. Knowing who has the bestest price the firstest is a huge advantage. But if our little shopping cart takes an extra 500 milliseconds to display, the world won't end. Or will it?</p>
+<h2>Latency Defined</h2>
+<p>My unsophisticated definition of <a href="http://en.wikipedia.org/wiki/Latency_(engineering)">latency</a> is that it is the elapsed time between A and B where A and B are something you care about. Low-latency and high-latency are relative terms. The latency requirements for a <a href="https://www.llnl.gov/str/Stuart.html">femptosecond laser</a> are far different than for mail delivery via the <a href="http://www.schoolhousevideo.org/Media/Pony%20ExpressAdvert.jpg">pony express</a>, yet both systems can be characterized by latency. A system has low-latency if it's low enough to meet requirements, otherwise it's a high-latency system.</p>
+<h2>Latency Explained</h2>
+<p>The best explanation of latency I've ever read is still <a href="http://rescomp.stanford.edu/~cheshire/rants/Latency.html">It's the Latency, Stupid</a> by admitted network wizard <a href="http://www.stuartcheshire.org/">Stuart Cheshire</a>. A wonderful and detailed rant explaining latency as it relates to network communication, but the ideas are applicable everywhere. <br /><br />Stuart's major point: <em>If you have a network link with low bandwidth then it's an easy matter of putting several in parallel to make a combined link with higher bandwidth, but if you have a network link with bad latency then no amount of money can turn any number of them into a link with good latency.</em><br /><br />I like the parallel with sharding in this observation. We put shards in parallel to increase capacity, but request latency through the system remains the same. So if we want to increase interactivity we have to address every component in the system that introduces latency and minimize or remove it's contribution. There's no "easy" scale-out strategy for fixing latency problems.</p>
+<h2>Sources of Latency</h2>
+<p>My parents told me latency was brought by Santa Clause in the dead of night, but that turns out not to be true! So where does latency come from?</p>
+<li><strong>Low Level Infrastructure</strong>. Includes OS / Kernel, Processors / CPU's, Memory, Storage related I/O, and Network related I/O. </li>
+<li><strong>High Level Infrastructure</strong>. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.24.5961">Analysis of sources of latency in downloading web pages</a> by Marc Abrams. The study examines several sources of latency: DNS, TCP, Web server, network links, and routers. Conclusion: In most cases, roughly half of the time is spent from the moment the browser sends the acknowledgment completing the TCP connection establishment until the first packet containing page content arrives. The bulk of this time is the round trip delay, and only a tiny portion is delay at the server. This implies that the bottleneck in accessing pages over the Internet is due to the Internet itself, and not the server speed.</li>
+<li><strong>Software Processing</strong>. Software processing accounts for much of the difficult to squeeze out latency in a system. In very rough terms a 2.0 GHz microprocessor can execute a few hundred lines of code every microsecond. Before a packet is delivered to an endpoint many thousands of instructions have probably already been executed. Then the handling software will spend many thousands more processing the message and then sending a reply. It all can add up to a substantial part of the latency budget. Included in this category are support services like databases, search engines, etc.</li>
+<li><strong>Frontend</strong>. 80-90% of the end-user response time is spent on the frontend, so it makes sense to concentrate efforts there before heroically rewriting the backend.</li>
+<li><strong>Service Dependency Latency</strong>. Dependent components increase latency. If component A calls compont B then the latency is the sum of the latency for each component and overall availability is reduced.</li>
+<li><strong>Propagation Latency</strong>. The speed at which data travels through a link. For fibre optic cable, the rate of signal propagation is roughly two-thirds the speed of light in vacuum. Every 20km takes about 100 microseconds of propagation latency. To reduce latency your only choice is to reduce the distance between endpoints.</li>
+<li><strong>Transmission Latency</strong>. The speed at which a data is transmitted on a communication link. On a 1Gbps network a 1000 bit  packet takes about one millionth of a second to transmit. It's not dependent on distance. To reduce latency you need a faster link.</li>
+<li><strong>Geographical Distribution</strong>. BCP (Business Continuity Planning) requires running in multiple datacenters which means added WAN latency constraints. </li>
+<li><strong>Messaging Latency</strong>. The folks at <a href="http://www.29west.com/docs/THPM/">29west</a> provide a great list forces that increase message latency: Intermediaries, Garbage Collection, Retransmissions, Reordering, Batching, CPU Scheduling, Socket Buffers, Network Queuing, Network Access Control, Serialization, Speed of Light.<br /><br />Draw out the list of every hop a client request takes and the potential number of latency gremlins is quite impressive. <br />
+<h2>The Downsides of Latency</h2>
+Lower sales may be the terminal condition of latency problems, but the differential diagnosis is made of many and varied ailments. As latency increases work stays queued at all levels of the system which puts stress everywhere. It's like dementia, the system forgets how to do anything. Some of the problems you may see are: Queues grow; Memory grows; Timeouts cascade; Memory grows; Paging increases; Retries cascade; State machines reset; Locks are held longer; Threads block; Deadlock occurs; Predictability declines; Throughput declines; Messages drop; Quality plummets.<br /><br />For a better list take a look at <a href="http://blogs.sun.com/toddjobson/entry/the_many_flavors_of_system1">The Many Flavors of System Latency.. along the Critical Path of Peak Performance</a> by Todd Jobson. A great analysis of the subject.<br />
+<h2>Managing Latency</h2>
+The general algorithm for managing latency is:</li>
+<li> Continually map, monitor, and characterize all sources of latency.</li>
+<li> Remove and/or minimize all latency sources that are found.<br /><br />Hardly a revelation, but it's actually rare for applications to view their work flow in terms of latency. This is part of the <a href="http://highscalability.com/log-everything-all-time">Log Everything All the Time</a> mantra. Time stamp every part of your system. Look at mean latency, standard deviation, and outliers. See if you can't make the mean a little nicer, pinch in that standard deviation, and chop off some of those spikes. With latency variability is the name of the game, but that doesn't mean that variability can't be better controlled and managed. Target your latency slimming efforts where it matters the most and you get the most bang for your buck.<br /><br />Next we will talk about various ideas for what you can do about latency once you've found it.<br />
+<h2>Dan Pritchett's Lessons for Managing Latency</h2>
+Dan Pritchett is one of the few who has openly written on architecting for latency. Here are some of Dan's suggestions for structuring systems to manage latency:</li>
+<li><strong>Loosely Couple Components</strong>. Loose coupling has a number of benifits: <a href="http://www.laputan.org/mud/">Tightly coupled systems</a> are impossible distribute across data centers, tightly couples systems fail together, and loosely coupled systems can be independently scaled and engineered for latency. </li>
+<li><strong>Use Asynchronous Interfaces</strong>. Set an expectation of asynchronous behavior between components. This allows you to add latency when you need to make changes. Getting users on hooked on synchronous low-latency interactions doesn't allow for architecture flexibility. So start from the beginning with asynch semantics.</li>
+<li><strong>Horizontally Scale from the Start</strong>. It's very difficult to change a monolithic schema once you meet a scaling wall. Start with a horizontal architecture so you don't build in too many problems that will be hard to remove later.</li>
+<li><strong>Create an Active/Active Architecture</strong>. Most approaches to BCP take an active/passive approach, only one data center is active at a time. Creating an active/active system, where all data centers operate simultaneously allows users to be served from the closest data center which decreases latency.</li>
+<li><strong>Use a BASE (basically available, soft state, eventually consistent) Instead of ACID (atomicity,  consistency, isolation, durability) Shared Storage Model</strong>. BASE is derived from the <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.1495">CAP Theorem</a> which is the highly counter intuitive notion that database services cannot ensure all three of the following properties at once: Consistency, Availability, Partition tolerance. A BASE based system is more tolerant to latency because it is an inherently partitioned and loosely coupled architecture and it uses eventual consistency. With eventual consistency you can make an update to one partition and return. You don't have to coordinate a transaction across multiple database servers, which makes a system have a higher and more variable latency.<br /><br />Clearly each of these principles is a major topic all on their own. For more details please read: <a href="http://www.addsimplicity.com/">Dan Pritchett</a> has written a few excellent papers on managing latency: <a href="http://www.infoq.com/articles/pritchett-latency">The Challenges of Latency</a>, <a href="http://www.softwaresummit.com/2007/speakers/presentations/PritchettArchitectingForLatency.pdf">Architecting for Latency</a>, <a href="http://www.addsimplicity.com/adding_simplicity_an_engi/2007/02/latency_exists_.html">Latency Exists, Cope!</a>.<br />
+<h2>GigaSpaces Lessons for Lowering Latency</h2>
+<a href="http://gigaspaces.com">GigsSpaces</a> is an in-memory grid vendor and as such is on the vanguard of the <a href="http://www.infoq.com/news/2008/06/ram-is-disk">RAM is the New Disk</a> style of application building. In this approach disk is pushed aside for keeping all data in RAM. Following this line of logic GigaSpaces came up with these <a href="http://blog.gigaspaces.com//2006/12/09/sbas-general-principles/">low latency architecture</a> principles:<br /><br /></li>
+<li> Co-location of the tiers (logic, data, messaging, presentation) on the same physical machine (but with a shared-nothing architecture so that there is minimal communication between machines)</li>
+<li> Co-location of services on the same machine</li>
+<li> Maintaining data in memory (caching)</li>
+<li> Asynch communication to a persistent store and across geographical locations<br /><br />The thinking is the primary source of latency in a system centers around accessing disk. So skip the disk and keep everything in memory. Very logical. As memory is an order of magnitude faster than disk it's hard to argue that latency in such a system wouldn't plummet.<br /><br />Latency is minimized because objects are in kept memory and work requests are directed directly to the machine containing the already in-memory object. The object implements the request behavior on the same machine. There's no pulling data from a disk. There isn't even the hit of accessing a cache server. And since all other object requests are also served from in-memory objects we've minimized the Service Dependency Latency problem as well.<br /><br />GigaSpaces isn't the only player in this market. You might want to also take a look at: <a href="http://www.scaleoutsoftware.com">Scaleout Software</a>, <a href="http://www.gridgain.com/">Grid Gain</a>, <a href="http://www.terracotta.org">Teracotta</a>, <a href="http://www.gemstone.com/">GemStone</a>, and <a href="http://www.oracle.com/technology/products/coherence/index.html">Coherence</a>. We'll have more on some of these products later.<br />
+<h2>Miscellaneous Latency Reduction Ideas</h2>
+</li>
+<li><strong>Cache</strong>. No, really? Well it had to be said. See <a href="http://highscalability.com/bunch-great-strategies-using-memcached-and-mysql-better-together">A Bunch of Great Strategies for Using Memcached and MySQL Better Together</a>.</li>
+<li><strong>Use a CDN</strong>. No, really? See <a href="http://highscalability.com/what-cdn-would-you-recommend-0">What CDN would you recommend?</a>.</li>
+<li><strong>Use a Caching Proxy Server</strong>. At least this is a little less obvious. See <a href="http://highscalability.com/strategy-front-s3-caching-proxy">Strategy: Front S3 with a Caching Proxy</a>.</li>
+<li><strong>Enhance Your Web Operations Capability</strong>.  There are plenty of available tools to help you pinpoint and correct operation related problems. See <a href="http://conferences.oreilly.com/velocity">Velocity Conference</a> for more information.</li>
+<li><strong>Use Yslow to Make Your Pages Go</strong>. Yslow is a tool to show sources of latency on the client side and suggest ways to fix any problems found.  See <a href="http://highscalability.com/product-yslow-speed-your-web-pages">Yslow to speed up your web pages</a>. </li>
+<li><strong>Use an Edge DNS Accelerator</strong>. This type of service "will ensure that a name server most accessible to the end user will pick up the request and respond." See <a href="http://www.winnersdontlose.com/2008/02/application-acceleration-strat.html">Edge Acceleration Strategies: Akamai</a>.</li>
+<li><strong>Optimize Virtual Machines</strong>. People often forget VM's exact a performance tax. Virtualized I/O can suffer a substantial performance penalty. See if it can't be tuned.</li>
+<li><strong>Use Ajax to minimize perceived latency to the user.</strong> Clever UI design can make a site feel faster than it really is.</li>
+<li><strong>Use a faster network</strong>.  A high speed <a href="http://en.wikipedia.org/wiki/Infiniband">InfiniBand</a> link can have an end-to end latency of about 1 microsecond. Another option is a <a href="http://en.wikipedia.org/wiki/10_Gigabit_Ethernet">10 GigE</a> network.</li>
+<li><strong>Scale up</strong>. Faster processors means less software induced latency.</li>
+<li><strong>Optimize firewalls</strong>. An often hidden latency enhancer is your firewall system. </li>
+<li><strong>Use Small Memory Chunks When Using Java</strong>. GC in Java kills latency. One way to minimize the impact of garbage collection on latency is to use more VMs and less memory in each VM instead of VM with a lot of memory. This prevents a large GC run and makes latency more predictable.</li>
+<li><strong>Use a TCP Offload Engine (TOE)</strong>. <a href="http://en.wikipedia.org/wiki/TCP_Offload_Engine">TOE tech</a> offloads the TCP/IP stack from the main CPU and puts it on the network controller. This means network adapters can respond faster which means faster end-to-end communication. Network adapters respond faster because bus wait time is reduced as the number of transactions across the system I/O bus and memory bus are reduced.</li>
+<li><strong>Design low latency network topoligies</strong>.  Phil Dykstra in <a href="http://proj.sunet.se/lanng/lanng2000/gigabit_network_issues.html">Issues Impacting Gigabit Networks:<br />Why don't most users experience high data rates?</a> pinpoints poor network design as one major source of latency: <em>On a single high performance network today, measured latencies are typically ~1.5x - 3x that expected from the speed of light in fiber. This is mostly due to taking longer than line-of-site paths. Between different networks (via NAPs) latency is usually much worse. Some extra distance is required, based on the availability of fiber routes and interconnects, but much more attention should be given to minimizing latency as we design our network topologies and routing.</em></li>
+<li><strong>Make TCP Faster</strong>. <a href="http://gigaom.com/2008/08/12/fastsoft-tweaks-tcp-to-accelerate-the-internet/">FastTCP</a>, for example, tweaks TCP to provide smoother and faster data  delivery.</li>
+<li><strong>Copy Data Zero Times</strong>. <a href="http://www.ibm.com/developerworks/linux/library/j-zerocopy/">Efficient data transfer through zero copy</a>. Copying data kills. This excellent article explains the path data takes through the OS and how to reduce the number of copies to the big zero.</li>
+<li><strong>Increase the speed of light</strong>. Warp capability could really help speed up communication. Get to work on that!<br />
+<h2>Application Server Architecture Matters Again</h2>
+With the general move over the past few years to a standard shared nothing two-tierish architecture, discussion of application server architectures has become a neglected topic, mainly because there weren't application servers anymore. Web requests came in, data was retrieved from the database, and results were calculated and returned to the user.  No application server. The web server became the application server. This was quite a change from previous architectures which were more application server oriented. Though they weren't called application servers, they were call daemons or even just servers (as in client-server).<br /><br />Let's say we buy into <a href="http://www.infoq.com/news/2008/06/ram-is-disk">RAM is the New Disk</a>. This means we'll have many persistent processes filled with many objects spread over many boxes. A stream of requests are directed at each process and those requests must be executed in each process. How should those processes be designed? <br /><br />Sure, having objects in memory reduces latency, but it's very easy through poor programming practice to lose all of that advantage. And then some. Fortunately we have a ton of literature on how to structure servers. I have a more thorough discussion here in <a href="http://possibility.com/wiki/index.php?title=ArchitectureDiscussion">Architecture Discussion</a>. Also take a look at <a href="http://possibility.com/wiki/index.php?title=Seda">SEDA</a>, an architecture for highly concurrent servers and <a href="http://www.cs.wustl.edu/~schmidt/ACE.html">ACE</a>, an OO network programming toolkit in C++.<br /><br />A few general suggestions:</li>
+<li><strong>Stop Serializing/Deserializing Messages</strong>. It boggles my mind why we still serialize and deserialize messages. Leave messages in a binary compressed format and decode only on access. Very few activities waste more CPU and cause more lock contention through the memory library than does serialization. </li>
+<li><strong>Load Balance Across Read Replicas</strong>. The more copies of objects you have the more work you can perform in parallel. Consider keeping objects replicas for both high availability and high scalability. This is the same strategy distributed file systems use handle more load. It works in-memory as well.</li>
+<li><strong>Don't Block</strong>. The goal for a program is to use its whole CPU time quanta when it's scheduled to run. Don't block. Don't give the processor back to the OS for someone else to get it. Block for any reason and your performance tanks because not only do you incur the latency of the operation but there's added rescheduling latency as well. Who knows when your thread will get scheduled again? </li>
+<li><strong>Minimize Paging</strong>. Thrashing is when a system experiences excessive page faults. More work is spent on moving memory around than is being given to tasks to perform real work. It's usually three orders of magnitude slower to access a page from disk instead of memory. Unfortunately, memory managers in most languages make reducing paging difficult as you have no control over where memory is placed or how it us used. With CPU speeds these days basically an operation is free when you are operating on paged-in memory. </li>
+<li><strong>Minimize/Remove locking.</strong> Locks add latency and variability to a processing pipeline. A lock is a blocking operation. So you are choosing not to run when you have the CPU which means you incur a number of different forms of latency. Select a server architecture that minimizes the need for locks. <br />
+<h2>Colocate</h2>
+Locating applications together reduces latency by reducing data hops. The number and location of network hops a message has to travel through is a big part of the end-to-end latency of a system.<br /><br />For example, from New York to the London Stock Exchange a round trip message takes 84 milliseconds to send, from Frankfurt it take 18 milliseconds, and from Tokyo it takes 208 milliseconds. If you want to minimize latency then the clear strategy is to colocate your service in the London Stock Exchange. Distance is minimized and you can probably use a faster network too.<br /><br />Virtualization technology makes it easier than ever to compose separate systems together. Add a cloud infrastructure to that and it becomes almost easy to dramatically lower latencies by colocating applications.<br />
+<h2>Minimize the Number of Hops</h2>
+Latency increases with each hop in a system. The fewer hops the less latency. So put those hops on a diet. Some hop reducing ideas are:</li>
+<li><strong>Colocation</strong>. Colocation is one hop reducing strategy. It reduces the number of WAN links, routers, etc that a message has to go through. If a router takes 400 microsecond for each packet, for example, getting rid of that router reduces latency. Colocation also works for code and data, as in the GigaSpaces architecture. They maintain a sharded in-memory object cache so an extra database hop is avoided when executing an operation.</li>
+<li><strong>Simplify Software Architecture</strong>. Remove intermediate daemons, brokers and other latency adding components. Dispatch work to where it will be processed as simply and fast as possible. Peer-to-peer architectures and sharding approaches are good at this. Avoid sending work into a hub for central dispatching. Dispatch as far out at the edge as possible.</li>
+<li><strong>Open a New Datacenter</strong>. Facebook opened a new datacenter on the east coast in order to save <a href="http://www.facebook.com/notes.php?id=9445547199">70 milliseconds</a>.<br />
+<h2>Build Your own Field-programmable Gate Array (FPGA)</h2>
+This one may seem a little off the wall, but creating your own custom FPGA may be a killer option for some problems. A FPGA is a semiconductor device containing programmable logic. Typical computer programs are a series of instructions that are loaded and interpreted by a general purpose microprocessor, like the one in your desk top computer. Using a FPGA it's possible to bypass the overhead of a general purpose microprocessor and code your application directly into silicon. For some classes of problems the performance increases can be dramatic. <br /><br />FPGAs are programmed with your task specific algorithm. Usually something compute intensive like medical imaging, modeling bond yields, cryptography, and matching patterns for deep packet inspections. I/O heavy operations probably won't benefit from FPGAs. Sure, the same algorithm could be run on a standard platform, but the advantage FPGAs have is even though they may run at a relatively low clock rates,  FPGAs can perform many calculations in parallel. So perhaps orders-of-magnitude more work is being performed each clock cycle. Also, FPGAs often use content addressable memory which provides a significant speedup for indexing, searching, and <a href="http://portal.acm.org/citation.cfm?id=1058426.1058885&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=26269255&amp;CFTOKEN=63769848">matching operations</a>. We also may see a move to FPGAs because they use less power. Stay lean and green.<br /><br />In embedded projects FPGAs and <a href="http://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICS (application-specific integrated circuit)</a> are avoided like the plague. If you can get by with an off-the-shelf microprocessors (Intel, AMD, ARM, PPC, etc) you do it. It's a time-to-market issue. Standard microprocessors are, well, standard, so that makes them easy to work with. Operating systems will already have board support packages for standard processors, which makes building a system faster and cheaper. Once custom hardware is involved it becomes a lot of work to support the new chip in hardware and software. Creating a software only solution is much more flexible in a world where constant change rules. Hardware resists change. So does software, but since people think it doesn't we have to act like software is infinitely malleable.<br /><br />Sometimes hardware is the way to go. If you are building a NIC that has to process packets at line speed the chances are an off-the-shelf processor won't be cost effective and may not be fast enough. Your typical high end graphics card, for example, is a marvel of engineering. Graphics cards are so powerful these days distributed computation projects like <a href="http://folding.stanford.edu/"><span class="__cf_email__" data-cfemail="54123b38303d3a33143c3b3931">[email&#160;protected]</span></a> get a substantial amount of their processing power from graphics cards. Traditional CPUs are creamed by NVIDIA GeForce GPUs which perform protein-folding simulations up to <a href="http://news.soft32.com/geforce-gpus-acclerate-protein-simulations_6813.html">140 times faster</a>. The downside is GPUs require very specialized programming, so it's easier to write for a standard CPU and be done with it.<br /><br />That same protein folding power can be available to your own applications. <a href="http://www.wallstreetandtech.com/blog/archives/2007/04/activ_financial.html">ACTIV Financial</a>, for example, uses a custom FGPA for low latency processing of high speed financial data flows. ACTIV's competitors use a traditional commodity box approach where financial data is processed by a large number of commodity servers. Let's say an application takes 12 servers. Using a FPGA the number of servers can be collapsed <strong>down to one</strong> because more instructions are performed simultaneously which means fewer machines ar needed. Using the FPGA architecture they process <strong>20 times more messages</strong> than they did before and have <strong>reduced latency from one millisecond down to less than 100 microseconds</strong>. <br /><br />Part of the performance improvement comes from the high speed main memory and network IO access FPGAs enjoy with the processor. Both <a href="http://www.intel.com/technology/platforms/quickassist/index.htm">Intel</a> and <a href="http://en.wikipedia.org/wiki/Torrenza">AMD</a> make it relatively easy to connect FPGAs to their chips. Using these mechanisms data moves back and forth between your processing engine and the main processor with minimal latency. In a standard architecture all this communication and manipulation would happen over a network.<br /><br />FPGAs are programmed using hardware description languages like <a href="http://en.wikipedia.org/wiki/Verilog">Verilog</a> and <a href="http://en.wikipedia.org/wiki/VHDL">VHDL</a>. You can't get away from the hardware when programming FPGAs, which is a major bridge to cross for us software types. Many moons ago I took a Verilog FPGA programming class. It's not easy, nothing is ever easy, but it is possible. And for the right problem it might even be worth it.<br />
+<h2>Related Articles</h2>
+</li>
+<li><a href="http://www.infoq.com/articles/pritchett-latency">The Challenges of Latency</a> by Dan Pritchett</li>
+<li><a href="http://www.addsimplicity.com/adding_simplicity_an_engi/2007/02/latency_exists_.html">Latency Exists, Cope!</a> by Dan Pritchett</li>
+<li><a href="http://www.softwaresummit.com/2007/speakers/presentations/PritchettArchitectingForLatency.pdf">Architecting for Latency</a> by Dan Pritchett</li>
+<li> <a href="http://www.acmqueue.com/modules.php?name=Content&amp;pa=showpage&amp;pid=540">BASE: An ACID Alternative</a> by Dan Pritchett, eBay</li>
+<li><a href="http://www.infoq.com/news/2008/01/comet-scalability">Comet: Sub-Second Latency with 10K+ Concurrent Users</a> by Alexander Olaru</li>
+<li><a href="http://rescomp.stanford.edu/~cheshire/rants/Latency.html">It's the Latency, Stupid</a> by Stuart Cheshire</li>
+<li><a href="http://www.stuartcheshire.org/papers/LatencyQuest.html">Latency and the Quest for Interactivity</a> by Stuart Cheshire</li>
+<li><a href="http://ajaxian.com/archives/the-importance-of-bandwidth-versus-latency">The importance of bandwidth versus latency</a> by Dion Almaer </li>
+<li><a href="http://www.rgoarchitects.com/Files/fallacies.pdf">Fallacies of Distributed Computing</a> - The second fallacy is "Latency is Zero"</li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_device_bandwidths">List of device bandwidths</a></li>
+<li><a href="http://blogs.msdn.com/oldnewthing/archive/2006/04/07/570801.aspx">Computing over a high-latency network means you have to bulk up</a> by Raymond Chen</li>
+<li><a href="http://richui.blogspot.com/2005/09/ajax-latency-problems-myth-or-reality.html">AJAX Latency problems: myth or reality?</a> by Jep Castelein</li>
+<li><a href="http://arstechnica.com/paedia/r/ram_guide/ram_guide.part1-2.html">RAM Guide: Part I DRAM and SRAM Basics</a> and <a href="http://arstechnica.com/paedia/r/ram_guide/ram_guide.part2-1.html">Part 2</a> by Jon "Hannibal" Stokes</li>
+<li><a href="http://blogs.sun.com/toddjobson/entry/the_many_flavors_of_system1">The Many Flavors of System Latency.. along the Critical Path of Peak Performance</a> and <a href="http://blogs.sun.com/toddjobson/entry/processors_and_performance_chips_mips">Processors and Performance : Chips, MIPS, and Sizing blips..</a> by Todd Jobson. A very detailed and helpful analysis of latency sources.</li>
+<li><a href="http://feedblog.org/2006/11/26/ethernet-latency-the-hidden-performance-killer/">Ethernet Latency: The Hidden Performance Killer</a> by Kevin Burton</li>
+<li><a href="http://blog.gigaspaces.com//2007/05/04/network-latency-vs-end-to-end-latency/">Network latency vs. end-to-end latency</a> by Nati Shalom</li>
+<li><a href="http://www.a-teamgroup.com/article/low-latency-delivery-enters-mainstream-but-standard-measurement-remains-elusive-2/#more-7833">Low-Latency Delivery Enters Mainstream; But Standard Measurement Remains Elusive</a> by Andrew Delaney</li>
+<li><a href="http://www.a-teamgroup.com/article/the-three-faces-of-latency/#checkmark">The three faces of latency</a> by By Scott Parsons, Chief Scientist at Exegy, Inc.</li>
+<li><a href="http://possibility.com/wiki/index.php?title=ArchitectureDiscussion">Architecture Discussion</a></li>
+<li><a href="http://benhutchison.wordpress.com/2008/06/15/the-jvm-needs-value-types/">The JVM needs Value Types</a> - Solving the next bottleneck. Value types use less space, less paging, less memory allocation, better cache usage, better garbage collection profile.</li>
+<li><a href="http://www.webperformancematters.com/journal/2007/7/24/latency-bandwidth-and-response-times.html">Latency, Bandwidth, and Response Times</a> by Chris Loosley.</li>
+<li><a href="http://www.ibm.com/developerworks/linux/library/l-real-time-linux/index.html?S_TACT=105AGX03&amp;S_CMP=ART">Anatomy of real-time Linux architectures</a> by M. Time Jones.</li>
+<li><a href="http://www.slideshare.net/gemstonesystems/true-cost-of-latency">True Cost of Latency</a> by GemStone</li>
+
+        
+  
+          
+  
+         
+  
+      </div>
+
+    
+
+  </div>
+
+      <div class="journal-entry-tag journal-entry-tag-post-body">
+      <div class="journal-entry-tag-post-body-line1"><span class="posted-by">  <a href="http://highscalability.com/blog/author/toddhoff"> <img title="Author" alt="Author" class="inline-icon user-registered-icon" rel="smalllight" src="transparent.png" />Todd Hoff</a></span> |  <span class="post-comments"><a href="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html#comments"> <img title="Comment" alt="Comment" class="inline-icon comment-icon" rel="smalllight" src="transparent.png" />21 Comments</a></span> |  <span class="permalink-item"><a class="permalink" href="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html"> <img title="Permalink" alt="Permalink" class="inline-icon permalink-icon" rel="smalllight" src="transparent.png" />Permalink </a></span> |  <span class="share-item"><a href="javascript:noop();" onclick="Squarespace.Interaction.shareLink(this,'%2Fblog%2F2009%2F7%2F25%2Flatency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html','Latency%20is%20Everywhere%20and%20it%20Costs%20You%20Sales%20-%20How%20to%20Crush%20it');"> <img title="Share Article" alt="Share Article" class="inline-icon share-icon" rel="smalllight" src="transparent.png" />Share Article </a></span> <span class="print-item"><a href="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html?printerFriendly=true"> <img title="Print Article" alt="Print Article" class="inline-icon print-icon" rel="smalllight" src="transparent.png" />Print Article </a></span> <span class="email-item"><a href="http://highscalability.com/blog/recommend/5337721"> <img title="Email Article" alt="Email Article" class="inline-icon email-icon" rel="smalllight" src="transparent.png" />Email Article </a></span> </div>
+      <div class="journal-entry-tag-post-body-line2"><span class="posted-in">in <span class="tag-element"><a rel="tag" href="http://highscalability.com/blog/category/latency"> <img title="Category" alt="Category" class="inline-icon category-icon" rel="smalllight" src="transparent.png" />Latency</a></span>, <span class="tag-element"><a rel="tag" href="http://highscalability.com/blog/category/strategy"> <img title="Category" alt="Category" class="inline-icon category-icon" rel="smalllight" src="transparent.png" />Strategy</a></span></span>  <span class="post-snippet-1"><iframe src="http://www.facebook.com/plugins/like.php?href=http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></span> <span class="post-snippet-2"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html" data-text="Latency is Everywhere and it Costs You Sales - How to Crush&nbsp;it" data-count="horizontal">Tweet</a><script data-cfasync="false" src="email-decode.min.js"></script><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span> </div>
+      <div class="journal-entry-tag-post-body-line3"></div>
+    </div>
+  
+  
+  <div class="clearer"></div>
+
+</div>
+</div>
+
+
+
+
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="journal-comment-area-wrapper">
+    <div id="comments" class="journal-comment-area">
+
+      <h3 class="caption">Reader Comments  (21) </h3>
+
+      
+        
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664759">
+
+    <div id="item5664759" class="body">
+
+      <p>Great and at long last a discussion of latency within the context of web operations.</p><p>I've been trying to write about it based on my conversations with people in the web ops world, and one notion that I will have to re-read the blog to see if it's the case, but on the first pass, it is recommended a "watch everything" approach.</p><p>I'm seeing that, in the end, the only latency that initially matters is what real users experience.  From there, a heuristic can help to identify where to drill-down to address or mitigate.</p><p>Conversely, the more "bottom-up" approach I've seen, operations gets flooded with a ton of alerts and don't know which one is having one level of real latency impact (server and network are firing off intermittent alerts, but what is the real-user latency).  Or...I've seen scenarios where everything shows "green" at the lower systems level, but you're still getting end-user latency....slowness by a thousand cuts which stay under the radar.</p><p>Looking forward to hearing more...my glimmer of insights into this (not nearly as detailed but more in small dribbles as I speak with people)....<a rel="nofollow" href="http://www.realuserwebops.com">http://www.realuserwebops.com</a></p><p></p><p></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615991" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Anonymous
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664760">
+
+    <div id="item5664760" class="body">
+
+      <p>Excellent post!</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615992" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>known
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664761">
+
+    <div id="item5664761" class="body">
+
+      <p>This is one of the best articles I've ever seen assembled.</p><p>I work on high performance, cloud-based Drupal sites, and own a business that does this for customers.  We've also developed CDN brokering technologies, to be able to distribute load, and worked on performance strategies for the full stack.  There are so many layers that have to be thought about, that it's somewhat difficult to build these systems.  You end up finding a solution that works, and then driving multiple customers towards a unified solution so they can share the cost of maintaining them, and improving them as you learn.</p><p>When dealing with latency management, it's hard to deliver a "solution" as much as a "process", which is pretty common for complex engineering systems. </p><p>Can't thank you enough for posting the article.  I'd love to talk to you more about what you're doing.</p><p>Best,</p><p>Jonathan Lambert</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615993" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Jonathan Lambert
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664762">
+
+    <div id="item5664762" class="body">
+
+      <p>An excellent, thorough article. Thank you very much.</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615994" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Lucas Eagleton
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664763">
+
+    <div id="item5664763" class="body">
+
+      <p>Latency is very important in video games, here's an article on how it's measured:</p><p><a rel="nofollow" href="http://cowboyprogramming.com/2008/05/30/measuring-responsiveness-in-video-games/">http://cowboyprogramming.com/2008/05/30/measuring-responsiveness-in-video-games/</a></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615995" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Anonymous
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664764">
+
+    <div id="item5664764" class="body">
+
+      <p>I had a similar requirement: we are building a high-volume reservation system for hotels and we have one business process in there (luckily read-only) which is enormous complex. Our goal was also to minimize latency (measured as milliseconds between entry into infrastructure and leave of infrastructure) with an acceptable cost point.</p><p>As we developed this project completely green field, we could do whatever we believed was the best. Based on our analysis we recognized, that in a classical App Server/SQL architecture, most time was actually spent within the DB between the business logic and table access (yes, pretty much everything was done in a stored procedure yet); however, even with the best optimizations we could only achieve 300 to 600 milliseconds.</p><p>Given the knowledge that most time is spent within the stored procedure, and there virtually all in data access, we designed a solution, which would optimize that code path.</p><p>The result can be seen here: <a rel="nofollow" href="http://hetras.com/2008/07/29/a-great-week-for-hetras-quote-is-going-into-real-implementation-phase/">http://hetras.com/2008/07/29/a-great-week-for-hetras-quote-is-going-into-real-implementation-phase/</a></p><p>Based on our first numbers coming in, we achieve between factor 100 and 500 in improving the response time (!). Example at hand: Taking a users username/password, check whether it authenticates and check which permissions this user has (all data stored in a normalized table): MS SQL Server: ~5 milliseconds, our architecture: 7 to 10 micro(!)seconds.</p><p>Long story short, there are a lot of ways to improve latency, and even if there are extreme requirements (as we have), the are solutions for that. A lot of work, yes, but possible.</p><p>Funnily, we didn't employ one of your ideas to optimize the latency yet (of course some we could apply in addition) - I basically want to show that there are even more ways to achieve an outstanding result (end user 'latency' will go from around 1+ second to around 200 milliseconds. That's what I call a nice win.)</p><p>Cheers, Michael</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615996" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Michael
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664765">
+
+    <div id="item5664765" class="body">
+
+      <p>@Jonathan I'm glad you found the article useful.<br/>@Anonymous Very cool and clever article on measuring video game latency. Thanks.<br/>@Michael Excellent job on getting your latency down to 20 msecs. But when I read your article I did notice a little partitioning, replication, loose coupling, and caching in your Quote servers :-)</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615997" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Todd Hoff
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664766">
+
+    <div id="item5664766" class="body">
+
+      <p>Excellent article.  </p><p>There is one other form of latency which is touched, but not expanded, upon.  That is how the application architecture effects both development and business latency.  If the application architecture is tightly coupled, it makes it very difficult to add new features, resolve defects, etc.  </p><p>This increases development time, and also increases the amount of time it takes for the business to respond to customer requests and competitive threats.  And this is what really costs sales.</p><p></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615998" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Mark
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664767">
+
+    <div id="item5664767" class="body">
+
+      <p>> but not expanded, upon.</p><p>There's a lot more to say on each topic and and application architectures is certainly one of them. I think Dan Pritchett does a good job expanding on large scale application architectures in his articles on latency. In my Architecture Discussion link there's a lot of detail on different process architectures. And I'm open to suggestions! :-)</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6615999" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Todd Hoff
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664768">
+
+    <div id="item5664768" class="body">
+
+      <p>Todd, </p><p>I am in awe. This is an excellent article, well-researched, well-linked, well-documented, and well-written. <br/>I'll follow up in a post as well, but just had to drop a note to say thank you for such a great post. </p><p>Lori </p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616000" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Lori MacVittie
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664769">
+
+    <div id="item5664769" class="body">
+
+      <p>Latency has always been a matter of concern for high scalable web applications & in particular, the ecommerce applications that require a high responsive server platform to manage the multi step queries..I recently used many versions of shopping carts for this matter. I particularly like exploring the different additional ecommerce modules of any<a href="http://highscalability.com/&lt;a&#32;rel="nofollow" href="http://www.justskins.com/ecommerce/shopping-cart-softwares-reviewed/513"">http://www.justskins.com/ecommerce/shopping-cart-softwares-reviewed/513"</a>> PHP Shopping Cart</a> that are available in the open source category, since they are the ones who are using the most up to date programming techniques to manage latency. </p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616001" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Jack Lawson
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664770">
+
+    <div id="item5664770" class="body">
+
+      <p>Thanks for a great article and the latency "resource center"! </p><p>I particularly appreciate and agree with your statement <i>"So if we want to increase interactivity we have to address every component in the system that introduces latency and minimize or remove it's contribution."</i>. </p><p>We have found that, not only, latency has a direct cost associated with it, but that it is being magnified when loads are fluctuating and system scalability is required. When you need to continuously grow and shrink your environment, the cost of latency and the resulting bottlenecks is growing exponentially.  And indeed, <i>"there's no "easy" scale-out strategy for fixing latency problems"</i>, but it is possible :). In fact, a recent <a href="http://highscalability.com/&lt;a&#32;rel="nofollow" href="http://blog.gigaspaces.com/2008/11/07/scaling-the-web-layer-%e2%80%93-the-web-container-benchmark/"">http://blog.gigaspaces.com/2008/11/07/scaling-the-web-layer-%e2%80%93-the-web-container-benchmark/"</a>>benchmark</a> we did on an industry-standard web based application running on Amazon EC2/EBS cloud is proving just that…<a href="http://highscalability.com/&lt;a&#32;rel="nofollow" href="http://blog.gigaspaces.com/2008/11/07/scaling-the-web-layer-%e2%80%93-the-web-container-benchmark/"">http://blog.gigaspaces.com/2008/11/07/scaling-the-web-layer-%e2%80%93-the-web-container-benchmark/"</a>>check it out</a> and let me know what you think.</p><p>Cheers,<br/>Alit<br/>GigaSpaces Technologies</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616002" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Alit Bar Sadeh
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664771">
+
+    <div id="item5664771" class="body">
+
+      <p>Todd - great article indeed.<br/>Took me sometime but i compiled my personal take on this great article.<br/>Here is a snippet from this take:</p><p>Sources for latency – is it the network or the software?</p><p>When discussing latency most people fall into one of two main camps: the "networking" camp and the "software architecture" camp. The former tends to think that the impact of software on latency is negligible, especially when it comes to Web applications.</p><p>Marc Abrams says "The bulk of this time is the round trip delay, and only a tiny portion is delay at the server. This implies that the bottleneck in accessing pages over the Internet is due to the Internet itself, and not the server speed."</p><p>The "software architecture" camp tends to believe that network latency is a given and there is little we can do about it. The bulk of latency that we can control lies within the software/application architecture. Dan Pritchett's Lessons for Managing Latency provides guidelines for an application architecture that addresses latency requirements using loosely-coupled components, asynchronousinterfaces, horizontal scale from the start, active/active architecture and by avoiding ACID and pessimistic transactions.</p><p>The full analysis is provided <a href="http://highscalability.com/&lt;a&#32;rel="nofollow" href="http://natishalom.typepad.com/nati_shaloms_blog/2008/12/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it-my-personal-take-away.html"">http://natishalom.typepad.com/nati_shaloms_blog/2008/12/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it-my-personal-take-away.html"</a>>here</a></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616003" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>natis
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664772">
+
+    <div id="item5664772" class="body">
+
+      <p>Since I have a fragile ego I mainly paid attention to the parts where you brutally attack me :-) Let me protect my tattered honor by saying there is a section on garbage collection in the document. And the common fallacy happens to be true. You shard to make requests independent and thus bound average latencies within a small deviation. There wouldn't be much of a point otherwise. If you block on a shared resource then that's not really sharding.</p><p>Nice article though. Thanks.</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616004" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Todd Hoff
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664773">
+
+    <div id="item5664773" class="body">
+
+      <p>a few important issues that seems to be missing from this otherwise comprehensive article</p><p>- latency vs. throughput<br/>those two attributes of a system are often interchangable and can be acheived one at the expense of the other.<br/>it is not something that is unique to web applications or even to computer systems in general but rather a <br/>funndemental engineering principle.<br/>one can take the common pipeline architecture of a CPU to see that the more stages you add to the pipe<br/>the more throughput you get because the time to finish the last stage is getting shorter but the overall latency<br/>of every instruction is getting longer because it has to go through more stages.<br/>the basic architecture of a server is another example, <br/>the way to achieve the shortest latency in a server is to dedicate a thread to every request so that there will be<br/>a minimal amount of context switches, the problem with that aproach is that it has a limited throughput<br/>due to the high price of managing a large amount of threads.<br/>a better approach is to use a SEDA model that adopt the pipeline metaphore and allows for better throughput at<br/>the expense of latency due to context switches from one stage to the other.<br/>having said that, it is possible to improve both throughput and latency by scaning your code for hotspots<br/>and reducing or even eliminate them, but eventually it's the architecture of the code will determine if it is<br/>throughput or latency oriented and a good architect will choose the required properties in advance.</p><p>- latency vs. perceived latency<br/>ask any GUI expert and he will tell you that what's really important in MMI(man-machine interface) <br/>is the perceived latency which is somewhat different than the nominal latency measured by a machine.<br/>there are a few reasons for that - <br/>we(as humans) can't tell the difference between 1 ms and 100ms but we can definitely tell the difference <br/>between 100ms and 500ms not to mention 1s, so there is no point in puting much effort to reduce the latency<br/>from 10ms to 5ms is the end user is a human.<br/>what we(as humans) are looking for is responsiveness so sometimes it is better to improve responsiveness<br/>by breaking down a long task so that every part will seem to be very fast instead of reducing the overall<br/>latency of the operation that will still look long in the eyes of the user.</p><p>my few cents,<br/>Asy.</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616005" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>asy ronen
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664774">
+
+    <div id="item5664774" class="body">
+
+      <p>Todd your right the article actually touches on GC hickups, somehow i missed it:</p><p><em>"Use Small Memory Chunks When Using Java. GC in Java kills latency. One way to minimize the impact of garbage collection on latency is to use more VMs and less memory in each VM instead of VM with a lot of memory. This prevents a large GC run and makes latency more predictable."</em></p><p></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616006" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>natis
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664775">
+
+    <div id="item5664775" class="body">
+
+      <p>There is another factor that seems to get lost in these discussions. That is the efficiency of data messaging integrations among applications, platforms and networks. Transforming messages eats time. If the message structure is subject to change, the flexibility the integration code to adapt to change is crucial. If the data architecture is virtualized and metadata-based, the metadata archives need to be "live" (accurately reflecting format and usage now) in order to rapidly revamp the interfaces to manage messaging changes along the workflow. </p><p>The fastest integrations are historically hand-coded. More recently, the automation of integration to eliminate hand-coding has tended to be proprietarily associated with hardware/software accelerators or middleware components. So the code is good for one platform, but not good for another. And to make an infrastructure change, the whole cycle of recoding has to begin again. </p><p>There are other solutions, openware automation tools for integration. There is one, as far as I know, that invokes translation code in run-time at speeds adequate for micro-second latency environments. That is my company's IDE, Volante Designer. </p><p></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616007" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Kathleen Hawk
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664776">
+
+    <div id="item5664776" class="body">
+
+      <p>Here is a presentation we (GemStone Systems) recently did with Push Technology talking about how their product 'Diffusion' and 'GemFire' can reduce latency throughout an architecture and thereby lower costs. I thought that it was fitting to go along with Todd's great article.</p><p><a rel="nofollow" href="http://www.slideshare.net/gemstonesystems/true-cost-of-latency">http://www.slideshare.net/gemstonesystems/true-cost-of-latency</a></p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616008" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>inquiry
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment5664777">
+
+    <div id="item5664777" class="body">
+
+      <p>Hi Todd</p><p>Really great article, latency is a difficult concept to communicate especially to non-technical website business owners - however its hugely important to monitor. </p><p>One of our challenges is finding ways to simply communicate what latency is and how it can effect a business - you have done that. We presented at Velocity this month and launched our Latency Simulator there - it's an open-source Internet Explorer add-on that simulates the effects of network latency; hopefully some of your readers will find it useful.</p><p>Direct download:<br/><a rel="nofollow" href="http://www.aptimize.com/downloads/file/latency-simulator.zip">http://www.aptimize.com/downloads/file/latency-simulator.zip</a></p><p>Cheers, Nicola</p>
+
+    </div>
+    <div class="signature">
+
+      December 31, 1999 | 
+  <a href="http://highscalability.com/contributor/6616009" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>Aptimize
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment6451156">
+
+    <div id="item6451156" class="body">
+
+      <p>Very informative post, Thanks. </p><p>I liked the talk about the application logic in hardware using FPGA an ASIC. Long back I read an article regarding Reconfigurable FPGA. These can be reprogrammed on the go.  Just as we run software programs on CPUs now a days, one day we will be able to run &quot;hardware programs&quot; on these chips.</p>
+
+    </div>
+    <div class="signature">
+
+      November 29, 2009 | 
+  <a href="http://highscalability.com/contributor/7413575" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>kumaresan
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="comment-wrapper authored-by-None">
+  <div class="comment" id="comment19404038">
+
+    <div id="item19404038" class="body">
+
+      <p>This increases development time, and also increases the amount of time it takes for the business to respond to customer requests and competitive threats. And this is what really costs sales.</p>
+
+    </div>
+    <div class="signature">
+
+      December 30, 2012 | 
+  <a href="http://highscalability.com/contributor/20715941" title="Unregistered Commenter">
+  <img title="Unregistered Commenter" alt="Unregistered Commenter" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(user-unregistered.png) top left no-repeat;"/>cland smith
+  
+  </a>
+
+
+
+      
+        
+
+        
+
+      
+
+    </div>
+
+  </div>
+  </div>
+
+
+
+        
+
+      
+
+    </div>
+    </div>
+
+    
+      <div class="journal-add-comment-area-wrapper">
+  
+          
+            
+            
+  <script type="text/javascript">
+  // <![CDATA[
+
+    var isAddCommentsVisible = true;
+
+    function toggleReferenceMode() {
+      if (isAddCommentsVisible) {
+        hideObject(document.getElementById("add-comment-area"));
+        showObject(document.getElementById("add-reference-area"));
+      } else {
+        showObject(document.getElementById("add-comment-area"));
+        hideObject(document.getElementById("add-reference-area"));
+      }
+      isAddCommentsVisible = !isAddCommentsVisible;
+    }
+
+    E.addListener("postform", "keydown", Squarespace.SessionAuthorizationKey.acquireAuthKey, '');
+
+  // ]]>
+  </script>
+
+  <form method="post" style="margin: 0; padding: 0;" name="postform" id="postform" action="http://highscalability.com/process/CreateJournalEntryComment?moduleId=4867632&amp;entryId=5337721"> 
+
+     <input type="hidden" name="currentPage" value="1"/> 
+ 
+    <div class="notice-box" style="margin-top: 2em;" id="add-comment-area">
+
+      
+                              <h3 class="caption"><img title="Post" alt="Post" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(comment.png) top left no-repeat;"/>Post a New Comment</h3>
+          
+        
+
+        <div class="caption-text">
+
+          Enter your information below to add a new comment.
+
+          
+
+        </div>
+
+        
+
+        <script type="text/javascript" src="storable-fields.js%3FCE=75"></script>
+
+        
+          <div class="input-field">
+            
+            <div id="authorName_title" class="title">
+               Author: 
+
+              &nbsp;<a id="storedFieldControls" style="display: none; font-size: 9px;" href="javascript:forgetSavedFields();">(forget stored information)</a>
+            </div>
+            <input class="text" type="text" style="width: 200px;" name="authorName" id="authorName" value="" maxlength="50" tabindex="2"/>
+          </div>
+
+          <div class="input-field">
+            
+            <div id="authorEmail_title" class="title"> Author Email (optional): 
+</div>
+            <input class="text" type="text" style="width: 200px;" name="authorEmail" id="authorEmail" value="" maxlength="255" tabindex="3"/>
+          </div>
+
+          <div class="input-field">
+            
+            <div id="authorUrl_title" class="title"> Author URL (optional): 
+</div>
+            <input class="text" type="text" style="width: 200px;" name="authorUrl" id="authorUrl" value="" maxlength="255" tabindex="4"/>
+          </div>
+
+          <script type="text/javascript">
+
+            YAHOO.util.Event.addListener(window, "load", function() {
+
+              document.getElementById("storedFieldControls").style.display = (Squarespace.StorableFields.isDataSaved("authorName", "authorEmail", "authorUrl") ? "inline" : "none");
+              Squarespace.StorableFields.recall("authorName", "authorEmail", "authorUrl");
+
+            });
+
+            function forgetSavedFields() {
+
+              Squarespace.StorableFields.forget("authorName", "authorEmail", "authorUrl");
+              document.getElementById("storedFieldControls").style.display = "none";
+
+            }
+
+          </script>
+
+        
+
+        <script type="text/javascript">
+          function expandBody() { b = document.getElementById("body"); b.style.height = (b.offsetHeight + 40) + "px"; }
+          function shrinkBody() { b = document.getElementById("body"); b.style.height = (b.offsetHeight - 40) + "px"; }
+        </script>
+
+        
+        <div id="body_title" style="padding-bottom: 5px; float: left;"> Post: 
+</div>
+        <div style="padding-bottom: 5px; float: right;"><a title="Increase the size of the comment area." href="javascript:expandBody();">&#8595;</a> | <a title="Decrease the size of the comment area." href="javascript:shrinkBody();">&#8593;</a></div>
+        <div class="clearer">&nbsp;</div>
+        <div style="padding-bottom: 5px;"><textarea rows="15" cols="60" name="body" id="body" tabindex="5"></textarea></div>
+        <div style="padding-bottom: 5px;">Some HTML allowed: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt;</div>
+
+        
+
+        
+
+        <div class="footer">
+
+                      <div class="notice-box-alert">
+              <div class="icon"><img title="Alert" alt="Alert" class="inline-icon" rel="smalllight" src="transparent.png" style="background:transparent url(alert.png) top left no-repeat;"/></div>
+              <div class="text">
+                <strong>Comment Moderation Enabled</strong><br/>
+                Your comment will not appear until it has been cleared by a website editor.
+              </div>
+            </div>
+          
+
+                    
+            <p style="padding-bottom: 10px;"><input class="checkbox" type="checkbox" name="followOptIn" id="followOptIn" value="true"  tabindex="6"/>
+              <span onclick="toggleNotify()" style="cursor: pointer; cursor: hand">Notify me of follow-up comments via email.</span>
+            </p>
+            <br/>
+
+          
+
+          <input type="hidden" id="authKey" name="authKey" value=""/>
+          <input style="width: 150px;" tabindex="6" class="button" type="button" name="createPostButton"  id="createPostButton"  value="Create Post"  onclick="submitContent(true);"/> &nbsp;&nbsp;
+          <input style="width: 150px;" tabindex="7" class="button" type="button" name="previewPostButton" id="previewPostButton" value="Preview Post" onclick="submitContent(false);"/>
+
+        </div>
+
+      
+
+    </div>
+
+  </form>
+
+  <script type="text/javascript">
+  // <![CDATA[
+
+    function toggleNotify() {
+      document.getElementById("followOptIn").click();
+    }
+              
+    function submitContent(isFinal) {
+      if (isFinal) {
+        document.getElementById("postform").action += "&finalize=true";
+        Squarespace.StorableFields.save("authorName", "authorEmail", "authorUrl");
+      }
+      Squarespace.Form.smartSubmit("postform");
+    }
+
+  // ]]>
+  </script>
+
+  
+
+
+  
+            
+  
+          
+  
+        
+  
+      </div>
+        
+    
+  
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+  
+
+</div></div> <!-- Content -->
+  
+    
+  
+    </div></div> <!-- Page Body -->
+
+    
+    
+    <div id="pageFooterWrapper"><div id="pageFooter">
+  
+              Copyright &copy; 2018, Todd Hoff.  All rights reserved.
+      
+  
+      
+  
+    </div></div>
+  
+  </div></div> <!-- Canvas -->
+  
+   
+
+
+  <div class="clearer" id="bodyClearer"></div>
+
+  
+
+
+
+</body>
+</html>

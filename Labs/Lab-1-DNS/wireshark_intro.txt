@@ -1,0 +1,43 @@
+River Kelly
+Lab 1 - DNS: WireShark Intro
+CSCI-466: Networks
+September 20, 2021
+
+
+1. UDP, IGMPv2, TCP
+
+2. Time-of-day: 09:47:56.226019462
+
+3. Destination (gaia.cs.umass.edu): 128.119.245.12
+   Source (my computer): 100.64.12.20
+
+4. two HTTP messages (GET and OK)
+file1.html HTTP/1.1
+Frame 75: 643 bytes on wire (5144 bits), 643 bytes captured (5144 bits) on interface enp2s0, id 0
+Ethernet II, Src: Wistron_e1:bb:35 (5c:ff:35:e1:bb:35), Dst: SuperMic_6e:20:0f (ac:1f:6b:6e:20:0f)
+Internet Protocol Version 4, Src: 100.64.12.20, Dst: 128.119.245.12
+Transmission Control Protocol, Src Port: 37472, Dst Port: 80, Seq: 1, Ack: 1, Len: 577
+Hypertext Transfer Protocol
+   GET /wireshark-labs/INTRO-wireshark-file1.html HTTP/1.1\r\n
+      [Expert Info (Chat/Sequence): GET /wireshark-labs/INTRO-wireshark-file1.html HTTP/1.1\r\n]
+         [GET /wireshark-labs/INTRO-wireshark-file1.html HTTP/1.1\r\n]
+         [Severity level: Chat]
+         [Group: Sequence]
+      Request Method: GET
+      Request URI: /wireshark-labs/INTRO-wireshark-file1.html
+      Request Version: HTTP/1.1
+   Host: gaia.cs.umass.edu\r\n
+   Connection: keep-alive\r\n
+   Cache-Control: max-age=0\r\n
+   Upgrade-Insecure-Requests: 1\r\n
+   User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36\r\n
+   Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/
+signed-exchange;v=b3;q=0.9\r\n
+   Accept-Encoding: gzip, deflate\r\n
+   Accept-Language: en-US,en;q=0.9\r\n
+   If-None-Match: "51-5cc3ebea2f314"\r\n
+   If-Modified-Since: Sat, 18 Sep 2021 05:59:01 GMT\r\n
+   \r\n
+   [Full request URI: http://gaia.cs.umass.edu/wireshark-labs/INTRO-wireshark-file1.html]
+   [HTTP request 1/1]
+   [Response in frame: 86]
