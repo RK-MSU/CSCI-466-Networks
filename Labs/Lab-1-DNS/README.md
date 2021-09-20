@@ -35,5 +35,5 @@ DNSSEC Verdicts
               Secure: 0  
             Insecure: 0  
                Bogus: 0  
-       Indeterminate: 0  
+       Indeterminate: 0 
 </details>

@@ -3,6 +3,7 @@ Lab 1 - DNS: WireShark DNS
 CSCI-466: Networks
 September 20, 2021
 
+
 1. The Asian web server that I choose was "www.soso.com". The IP address
 for this server is 118.191.216.57.
 
@@ -15,48 +16,28 @@ The authoritative DNS servers were:
 
 3. The mail IP address for Yahoo! mail is 98.136.103.23
 
-4. Locate the DNS query and response messages. Are then sent over UDP or TCP?
+4. The DNS query and response messages are sent over UDP.
 
-They are sent over UDP.
+5. The destination port of the DNS query message is 53 and the source port
+of the DNS response message is 53.
 
-5. What is the destination port for the DNS query message?
-What is the source port of DNS response message?
- 
-- Request Destination Port: 53
-- Response Source Port: 53
+6. The IP address the DNS message is destination is 100.64.0.1, this IP
+address is the same as my local DNS server.
 
-53 is the DNS query message port.
+7. The DNS query message is "Type": A Standard Query. The DNS query
+message does not contain any 'answers'.
 
-6. To what IP address is the DNS query message sent? Use ipconfig to determine the IP address of your local DNS server. Are these two IP addresses the same?
-
-IP sent to: 100.64.0.1
-
-7. Examine the DNS query message. What “Type” of DNS query is it? Does the query message contain any “answers”?
-
-The DNS query "type" is: 'A' Standard query
-
-The DNS query does not contain any "answers".
-
-8. Examine the DNS response message. How many “answers” are provided? What do each of these answers contain?
-
-There are 3 "answers" in the response message.
-
-These answers contain information about:
+8. The DNS response message contains 3 "answers". The "answer" statements
+contain the following information:
 - name of the host
 - type of address
 - class
-- time to live (TTL)
+- time to live
 - data length
 - IP Address
 
-9. Consider the subsequent TCP SYN packet sent by your host. Does the destination
-IP address of the SYN packet correspond to any of the IP addresses provided in
-the DNS response message?
-
-Yes - 104.16.44.99
-
-10. This web page contains images. Before retrieving each image, does your host
-issue new DNS queries?
+9. The subsequent TCP SYN packet destination IP address is the same as the
+IP address provided in the DNS query response: 104.16.44.99
 
 No, there are not addition DNS queries.
 
