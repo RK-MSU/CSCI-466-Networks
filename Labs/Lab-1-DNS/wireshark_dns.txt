@@ -4,8 +4,7 @@ CSCI-466: Networks
 September 20, 2021
 
 
-1. The Asian web server that I choose was "www.soso.com". The IP address
-for this server is 118.191.216.57.
+1. The Asian web server that I choose was "www.soso.com". The IP address for this server is 118.191.216.57.
 
 2. The Europe University I choose was London's Global University (www.ucl.ac.uk).
 The authoritative DNS servers were:
@@ -14,21 +13,17 @@ The authoritative DNS servers were:
     - ns2.ja.net.
     - ns1.cs.ucl.ac.uk.
 
-3. The mail IP address for Yahoo! mail is 98.136.103.23
+3. The mail IP address for Yahoo! mail is: 98.136.103.23
 
 4. The DNS query and response messages are sent over UDP.
 
-5. The destination port of the DNS query message is 53 and the source port
-of the DNS response message is 53.
+5. The destination port of the DNS query message is 53 and the source port of the DNS response message is 53.
 
-6. The IP address the DNS message is destination is 100.64.0.1, this IP
-address is the same as my local DNS server.
+6. The IP address the DNS message is destination is 100.64.0.1, this IP address is the same as my local DNS server.
 
-7. The DNS query message is "Type": A Standard Query. The DNS query
-message does not contain any 'answers'.
+7. The DNS query message is "Type": A Standard Query. The DNS query message does not contain any 'answers'.
 
-8. The DNS response message contains 3 "answers". The "answer" statements
-contain the following information:
+8. The DNS response message contains 3 "answers". The "answer" statements contain the following information:
 - name of the host
 - type of address
 - class
@@ -36,47 +31,54 @@ contain the following information:
 - data length
 - IP Address
 
-9. The subsequent TCP SYN packet destination IP address is the same as the
-IP address provided in the DNS query response: 104.16.44.99
+9. The subsequent TCP SYN packet destination IP address is the same as the IP address provided in the DNS query response: 104.16.44.99
 
---- Question?
-10. Before retrieving each image, my host does not preform any additional
-DNS messages.
+10. Before retrieving each image, my host does preform additional DNS messages.
 
---- Question?
-11. What is the destination port for the DNS query message? What is the source port
-of DNS response message?
-The destination port of the DNS query message is 53 and the source port
-of the DNS response message is 53.
+11. The destination port of the DNS query message is 53 and the source port of the DNS response message is 53.
 
---- Question?
-12. To what IP address is the DNS query message sent? Is this the IP address of your
-default local DNS server?
-The IP address the DNS message is destination is 100.64.0.1, this IP
-address is the same as my local DNS server.
+12. The IP address the DNS query message destination is 100.64.0.1, this is the IP address of my local DNS server.
 
-13. Examine the DNS query message. What “Type” of DNS query is it? Does the
-query message contain any “answers”?
-The DNS query message is "Type": A Standard Query. The DNS query
-message does not contain any 'answers'.
+13. The DNS query message is "Type": 'A' - Standard Query. The DNS query message does not contain any "answers".
 
-14. Examine the DNS response message. How many “answers” are provided? What
-do each of these answers contain?
+14. The DNS response message has 1 "answers". The information provided includes:
+- name of the host
+- type of address
+- class
+- time to live
+- data length
+- IP Address
 
-15. Provide a screenshot.
+15. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-15.png
 
-16. To what IP address is the DNS query message sent? Is this the IP address of your
-default local DNS server?
-17. Examine the DNS query message. What “Type” of DNS query is it? Does the
-query message contain any “answers”?
-18. Examine the DNS response message. What MIT nameservers does the response
-message provide? Does this response message also provide the IP addresses of the
-MIT namesers?
-19. Provide a screenshot.
-20. To what IP address is the DNS query message sent? Is this the IP address of your
-default local DNS server? If not, what does the IP address correspond to?
-21. Examine the DNS query message. What “Type” of DNS query is it? Does the
-query message contain any “answers”?
-22. Examine the DNS response message. How many “answers” are provided? What
-does each of these answers contain?
-23. Provide a screenshot.
+16. The DNS query message is sent to 100.64.0.1. Yes, this is the IP address of my local DNS server.
+
+17. The query message is "type": NS. It does not contain any "answers".
+
+18. The response message provides the following MIT nameservers:
+- ns1-173.akam.net
+- asia2.akam.net
+- eur5.akam.net
+- asia1.akam.net
+- usw2.akam.net
+- use5.akam.net
+- ns1-37.akam.net
+- use2.akam.net
+
+This response message does NOT provide the IP addresses of the MIT nameservers.
+
+19. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-19.png
+
+20. The IP address of the destination for the query message is 8.8.8.8 - Note: bitsy.mit.edu no longer exists, so I used google. No, this is not the IP address of my local DNS server. This is the IP address for Google.
+
+21. The DNS query message is "Type": 'A' - Standard Query. The DNS query message does not contain any "answers".
+
+22. The DNS response message has 1 "answers". The information provided includes:
+- name of the host
+- type of address
+- class
+- time to live
+- data length
+- IP Address
+
+23. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-23.png
