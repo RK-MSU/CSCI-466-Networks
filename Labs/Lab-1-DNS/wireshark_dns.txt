@@ -49,7 +49,7 @@ The authoritative DNS servers were:
 - data length
 - IP Address
 
-15. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-15.png
+15. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/master/Labs/Lab-1-DNS/lab-01-dns-question-15.png
 
 16. The DNS query message is sent to 100.64.0.1. Yes, this is the IP address of my local DNS server.
 
@@ -67,7 +67,7 @@ The authoritative DNS servers were:
 
 This response message does NOT provide the IP addresses of the MIT nameservers.
 
-19. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-19.png
+19. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/master/Labs/Lab-1-DNS/lab-01-dns-question-19.png
 
 20. The IP address of the destination for the query message is 8.8.8.8 - Note: bitsy.mit.edu no longer exists, so I used google. No, this is not the IP address of my local DNS server. This is the IP address for Google.
 
@@ -81,4 +81,4 @@ This response message does NOT provide the IP addresses of the MIT nameservers.
 - data length
 - IP Address
 
-23. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/9a9ab73febd0ae0b080190b541bbf46936aaa073/Labs/Lab-1-DNS/lab-01-dns-question-23.png
+23. Provide a screenshot: https://raw.githubusercontent.com/RK-MSU/CSCI-466-Networks/master/Labs/Lab-1-DNS/lab-01-dns-question-23.png
