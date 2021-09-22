@@ -92,3 +92,18 @@ numbers and retransmissions
 ## Summary
 
 > Walk aways with: Provide solution of viablity where there is none. Use state transitions diagrams (necessary before you start implementing)
+
+
+
+## Pipeline Overview
+
+**Relative advantages**
+
+- Which is better preformance: 
+  - SR (most situations)
+    - better worst case
+
+
+
+
+
