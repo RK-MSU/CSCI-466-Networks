@@ -103,7 +103,7 @@ numbers and retransmissions
   - SR (most situations)
     - better worst case
 
-
-
+- Q: relationship between seq. nums to avoid problem?
+  - "Larger space window"
 
 
