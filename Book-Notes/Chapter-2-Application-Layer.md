@@ -133,3 +133,37 @@ The first line of an HTTP request message is called the **request line**; the su
     Content-Type: text/html
 
     (data data data data data ...)
+
+## 2.7 Socket Programming: Creating Network Applications
+
+UDPClient.py
+
+```python
+from socket import *
+
+serverName = ’hostname’
+serverPort = 12000clientSocket = socket(AF_INET, SOCK_DGRAM)
+message = raw_input(’Input lowercase sentence:’)
+clientSocket.sendto(message.encode(),(serverName, serverPort))
+modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+print(modifiedMessage.decode())
+clientSocket.close()
+```
+
+- `clientSocket = socket(AF_INET, SOCK_DGRAM)`
+  - `AF_INET` indicates that the underlying network is using IPv4
+  - The second parameter indicates that the socket is of type `SOCK_DGRAM`, which means it is a UDP socket (rather than a TCP socket)
+
+UDPServer.py
+
+```python
+from socket import *
+serverPort = 12000
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+serverSocket.bind((’’, serverPort))
+print(”The server is ready to receive”)
+while True:
+  message, clientAddress = serverSocket.recvfrom(2048)
+  modifiedMessage = message.decode().upper()
+  serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+```
