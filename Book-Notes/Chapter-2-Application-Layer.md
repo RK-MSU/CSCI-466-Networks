@@ -134,6 +134,36 @@ The first line of an HTTP request message is called the **request line**; the su
 
     (data data data data data ...)
 
+## 2.3 Electronic Mail in the Internet
+
+- all mail messages to simple 7-bit ASCII
+- First, the client SMTP (running on the sending mail server host) has TCP establish a connection to port 25 at the server SMTP (running on the receiving mail server host)
+
+### POP3
+
+Post Office Protocol—Version 3 (POP3)
+
+POP3 is an extremely simple mail access protocol. It is defined in [RFC 1939], which is short and quite
+readable. Because the protocol is so simple, its functionality is rather limited. POP3 begins when the
+user agent (the client) opens a TCP connection to the mail server (the server) on port 110. With the TCPconnection established, POP3 progresses through three phases: authorization, transaction, and update.
+
+- **authorization**: the user agent sends a username and a password (in the clear) to authenticate the user.
+- **transaction**: the user agent retrieves messages; also during this phase, the user agent can mark messages for deletion, remove deletion marks, and obtain mail statistics.
+- **update**: occurs after the client has issued the `quit` command, ending the POP3 session; at this time, the mail server deletes the messages that were marked for deletion.
+
+### IMAP
+
+POP3 protocol does not provide any means for a user to create remote folders and assign messages to folders.
+
+An IMAP server will associate each message with a folder; when a message first arrives at the server, it
+is associated with the recipient’s INBOX folder. The recipient can then move the message into a new,
+user-created folder, read the message, delete the message, and so on.
+
+Another important feature of IMAP is that it has commands that permit a user agent to obtain
+components of messages. For example, a user agent can obtain just the message header of a message
+or just one part of a multipart MIME message. This feature is useful when there is a low-bandwidth
+connection (for example, a slow-speed modem link) between the user agent and its mail server.
+
 ## 2.7 Socket Programming: Creating Network Applications
 
 UDPClient.py
