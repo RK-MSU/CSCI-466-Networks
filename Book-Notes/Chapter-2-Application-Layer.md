@@ -7,7 +7,7 @@ These applications have been the driving force behind the Internet’s success, 
 homes, schools, governments, and businesses to make the Internet an integral part of their daily
 activities.
 
-## Principles of Network Applications
+## 2.1 Principles of Network Applications
 
 - The **application architecture**, on the other hand, is designed by the application developer and dictates how the application is structured over the various end systems. In choosing the application architecture, an application developer will likely draw on one of the two predominant architectural paradigms used in modern network applications: the client-server architecture or the peer-to-peer (P2P) architecture.
 In a **client-server architecture**, there is an always-on host, called the server, which services requests from many other hosts, called clients.
@@ -82,3 +82,54 @@ UDP does not include a congestion-control mechanism, so the sending side of UDP 
 the layer below (the network layer) at any rate it pleases. (Note, however, that the actual end-to-end
 throughput may be less than this rate due to the limited transmission capacity of intervening links or due
 to congestion).
+
+## 2.2 The Web and HTTP
+
+HTTP uses TCP as its underlying transport protocol (rather than running on top of UDP).
+
+It is important to note that the server sends requested files to clients without storing any state
+information about the client. If a particular client asks for the same object twice in a period of a few
+seconds, the server does not respond by saying that it just served the object to the client; instead, the
+server resends the object, as it has completely forgotten what it did earlier. Because an HTTP server
+maintains no information about the clients, HTTP is said to be a **stateless protocol**.
+
+### Non-Persistent and Persistent Connections
+
+- **non-persistent connections**: each request/response sent over a *separate* TCP connection
+  - Non-persistent connections have some shortcomings
+    - a brand-new connection must be established and maintained for *each requested object*
+    - each object suffers a delivery delay of two RTTs—one RTT to establish the TCP connection and one RTT to request and receive an object
+- **persistent connections**: all of the requests and their corresponding responses be sent over the *same* TCP connection
+
+With HTTP 1.1 persistent connections, the server leaves the TCP connection open after sending a
+response. Subsequent requests and responses between the same client and server can be sent over
+the same connection. In particular, an entire Web page (in the example above, the base HTML file and
+the 10 images) can be sent over a single persistent TCP connection.
+
+### HTTP Message Format
+
+The HTTP specifications [RFC 1945; RFC 2616; RFC 7540] include the definitions of the HTTP
+message formats. There are two types of HTTP messages, request messages and response messages,
+both of which are discussed below.
+
+#### HTTP Request Message
+
+    GET /somedir/page.html HTTP/1.1
+    Host: www.someschool.edu
+    Connection: close
+    User-agent: Mozilla/5.0
+    Accept-language: fr
+
+The first line of an HTTP request message is called the **request line**; the subsequent lines are called the **header lines**.
+
+#### HTTP Response Message
+
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: Tue, 18 Aug 2015 15:44:04 GMT
+    Server: Apache/2.2.3 (CentOS)
+    Last-Modified: Tue, 18 Aug 2015 15:11:03 GMT
+    Content-Length: 6821
+    Content-Type: text/html
+
+    (data data data data data ...)
