@@ -4,7 +4,9 @@
 - [2.2 The Web and HTTP](#22-the-web-and-http)
 - [2.3 Electronic Mail in the Internet](#23-electronic-mail-in-the-internet)
 - [2.4 DNS—The Internet’s Directory Service](#24-dnsthe-internets-directory-service)
+- [2.6 Video Streaming and Content Distribution Networks](#26-Video-Streaming-and-Content-Distribution-Networks)
 - [2.7 Socket Programming: Creating Network Applications](#27-socket-programming-creating-network-applications)
+
 
 Network applications are the raisons d’être of a computer network—if we couldn’t conceive of any useful
 applications, there wouldn’t be any need for networking infrastructure and protocols to support them.
@@ -215,6 +217,34 @@ sends a reply to Alice’s local DNS server, with the reply containing the two r
 DNS server then sends a DNS query to 212.212.212.1 , asking for the Type A record corresponding
 to www.networkutopia.com. This record provides the IP address of the desired Web server, say,
 212.212.71.4 , which the local DNS server passes back to Alice’s host. Alice’s browser can nowinitiate a TCP connection to the host 212.212.71.4 and send an HTTP request over the connection.
+
+## 2.6 Video Streaming and Content Distribution Networks
+
+Streaming prerecorded video now accounts for the majority of the traffic in residential ISPs in North
+America. In particular, the Netflix and YouTube services alone consumed a whopping 37% and 16%,
+respectively, of residential ISP traffic in 2015
+
+### Internet Video
+
+- Compressed Internet video typically ranges from 100 kbps for low-quality video to over 3 Mbps for streaming high-definition movies; 4K streaming envisions a bitrate of more than 10 Mbps.
+- In order to provide continuous playout, the network must provide an average throughput to the streaming application that is at least as large as the bit rate of the compressed video.
+
+### HTTP Streaming and DASH
+
+In HTTP streaming, the video is simply stored at an HTTP server as an ordinary file with a specific URL.
+When a user wants to see the video, the client establishes a TCP connection with the server and issues
+an HTTP GET request for that URL. The server then sends the video file, within an HTTP response
+message, as quickly as the underlying network protocols and traffic conditions will allow. On the client
+side, the bytes are collected in a client application buffer. Once the number of bytes in this buffer
+exceeds a predetermined threshold, the client application begins playback
+
+**Dynamic Adaptive Streaming over HTTP (DASH)** - the video is encoded into several different versions, with each version having a
+different bit rate and, correspondingly, a different quality level. The client dynamically requests chunks of
+video segments of a few seconds in length. When the amount of available bandwidth is high, the client
+naturally selects chunks from a high-rate version; and when the available bandwidth is low, it naturally
+selects from a low-rate version. The client selects different chunks one at a time with HTTP GET request messages
+
+With DASH, each video version is stored in the HTTP server, each with a different URL. The HTTPserver also has a **manifest file**, which provides a URL for each version along with its bit rate.
 
 ## 2.7 Socket Programming: Creating Network Applications
 
