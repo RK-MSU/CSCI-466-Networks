@@ -4,9 +4,9 @@
 - [2.2 The Web and HTTP](#22-the-web-and-http)
 - [2.3 Electronic Mail in the Internet](#23-electronic-mail-in-the-internet)
 - [2.4 DNS—The Internet’s Directory Service](#24-dnsthe-internets-directory-service)
+- [2.5 Peer-to-Peer File Distribution](#25-Peer-to-Peer-File-Distribution)
 - [2.6 Video Streaming and Content Distribution Networks](#26-Video-Streaming-and-Content-Distribution-Networks)
 - [2.7 Socket Programming: Creating Network Applications](#27-socket-programming-creating-network-applications)
-
 
 Network applications are the raisons d’être of a computer network—if we couldn’t conceive of any useful
 applications, there wouldn’t be any need for networking infrastructure and protocols to support them.
@@ -217,6 +217,21 @@ sends a reply to Alice’s local DNS server, with the reply containing the two r
 DNS server then sends a DNS query to 212.212.212.1 , asking for the Type A record corresponding
 to www.networkutopia.com. This record provides the IP address of the desired Web server, say,
 212.212.71.4 , which the local DNS server passes back to Alice’s host. Alice’s browser can nowinitiate a TCP connection to the host 212.212.71.4 and send an HTTP request over the connection.
+
+## 2.5 Peer-to-Peer File Distribution
+
+Pairs of intermittently connected hosts, called peers, communicate directly with each other. The peers are not owned by a service provider, but are instead desktops and laptops controlled by users.
+
+In client-server file distribution, the server must send a copy of the file to each of the peers—placing an enormous burden on the server and consuming a large amount of server bandwidth. In P2P file distribution, each peer can redistribute any portion of the file it has received to any other peers, thereby assisting the server in the distribution process.
+
+### Scalability of P2P Architectures
+
+- `u_s`: upload rate of the server’s access link
+- `u_i`: upload rate of the *i*th peer’s access link
+- `d_i`: the download rate of the *i*th peer’s access link
+- `F`: size of the file to be distributed (in bits)
+- `N`: number of peers that want to obtain a copy of the file
+- The **distribution time** is the time it takes to get a copy of the file to all `N` peers.
 
 ## 2.6 Video Streaming and Content Distribution Networks
 
