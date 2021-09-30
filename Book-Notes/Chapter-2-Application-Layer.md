@@ -1,5 +1,11 @@
 # Chapter 2 Application Layer
 
+- [2.1 Principles of Network Applications](#21-principles-of-network-applications)
+- [2.2 The Web and HTTP](#22-the-web-and-http)
+- [2.3 Electronic Mail in the Internet](#23-electronic-mail-in-the-internet)
+- [2.4 DNS—The Internet’s Directory Service](#24-dnsthe-internets-directory-service)
+- [2.7 Socket Programming: Creating Network Applications](#27-socket-programming-creating-network-applications)
+
 Network applications are the raisons d’être of a computer network—if we couldn’t conceive of any useful
 applications, there wouldn’t be any need for networking infrastructure and protocols to support them.
 Since the Internet’s inception, numerous useful and entertaining applications have indeed been created.
@@ -163,6 +169,52 @@ Another important feature of IMAP is that it has commands that permit a user age
 components of messages. For example, a user agent can obtain just the message header of a message
 or just one part of a multipart MIME message. This feature is useful when there is a low-bandwidth
 connection (for example, a slow-speed modem link) between the user agent and its mail server.
+
+## 2.4 DNS—The Internet’s Directory Service
+
+- All DNS query and reply messages are sent within UDP datagrams to port 53.
+
+The DNS is:
+
+1. a distributed database implemented in a hierarchy of DNS servers
+2. an application-layer protocol that allows hosts to query the distributed database
+
+There are three classes of DNS servers
+
+- root DNS servers
+- top-level domain (TLD) DNSservers
+- authoritative DNS servers
+
+![Fig. 2.17 - Portion of the hierarchy of DNS servers](images/fig-2.17.png)
+
+### DNS Records and Messages
+
+The DNS servers that together implement the DNS distributed database store resource records (RRs),
+including RRs that provide hostname-to-IP address mappings. Each DNS reply message carries one or
+more resource records.
+
+A resource record is a four-tuple that contains the following fields:
+
+    (Name, Value, Type, TTL)
+
+- If `Type=A`, then `Name` is a hostname and `Value` is the IP address for the hostname. Thus, a Type `A` record provides the standard hostname-to-IP address mapping.
+- If T`ype=NS`, then `Name` is a domain (such as foo.com) and `Value` is the hostname of an authoritative DNS server that knows how to obtain the IP addresses for hosts in the domain.
+  - This record is used to route DNS queries further along in the query chain.
+- If `Type=CNAME`, then `Value` is a canonical hostname for the alias hostname `Name`. This record can provide querying hosts the canonical name for a hostname.
+- If `Type=MX`, then `Value` is the canonical name of a mail server that has an alias hostname `Name`.
+- `TTL` is the time to live of the resource record; it determines when a resource should be removed from a cache.
+
+### Summary
+
+Suppose Alice in Australia wants to view the Web page www.networkutopia.com. As discussed earlier, her host will first send
+a DNS query to her local DNS server. The local DNS server will then contact a TLD com server. (The
+local DNS server will also have to contact a root DNS server if the address of a TLD com server is not
+cached.) This TLD server contains the Type NS and Type A resource records listed above, because the
+registrar had these resource records inserted into all of the TLD com servers. The TLD com server
+sends a reply to Alice’s local DNS server, with the reply containing the two resource records. The local
+DNS server then sends a DNS query to 212.212.212.1 , asking for the Type A record corresponding
+to www.networkutopia.com. This record provides the IP address of the desired Web server, say,
+212.212.71.4 , which the local DNS server passes back to Alice’s host. Alice’s browser can nowinitiate a TCP connection to the host 212.212.71.4 and send an HTTP request over the connection.
 
 ## 2.7 Socket Programming: Creating Network Applications
 
