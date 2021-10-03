@@ -4,6 +4,7 @@
 - [3.2 Multiplexing and Demultiplexing](#32-Multiplexing-and-Demultiplexing)
 - [3.3 Connectionless Transport: UDP](#33-Connectionless-Transport-UDP)
 - [3.4 Principles of Reliable Data Transfer](#34-Principles-of-Reliable-Data-Transfer)
+- [3.5 Connection-Oriented Transport: TCP](#35-Connection-Oriented-Transport-TCP)
 
 ## 3.1 Introduction and Transport-Layer Services
 
@@ -230,3 +231,17 @@ The window size must be less than or equal to half the size of the sequence numb
 | Acknowledgment | Used by the receiver to tell the sender that a packet or set of packets has been received correctly. Acknowledgments will typically carry the sequence number of the packet or packets being acknowledged. Acknowledgments may be individual or cumulative, depending on the protocol. |
 | Negative acknowledgment | Used by the receiver to tell the sender that a packet has not been received correctly. Negative acknowledgments will typically carry the sequence number of the packet that was not received correctly. |
 | Window, pipelining | The sender may be restricted to sending only packets with sequence numbers that fall within a given range. By allowing multiple packets to be transmitted but not yet acknowledged, sender utilization can be increased over a stop-and-wait mode of operation. We’ll see shortly that the window size may be set on the basis of the receiver’s ability to receive and buffer messages, or the level of congestion in the network, or both. |
+
+## 3.5 Connection-Oriented Transport: TCP
+
+TCP is said to be **connection-oriented** because before one application process can begin to send data
+to another, the two processes must first “handshake” with each other—that is, they must send some
+preliminary segments to each other to establish the parameters of the ensuing data transfer.
+
+A TCP connection provides a **full-duplex** service: If there is a TCP connection between Process A on
+one host and Process B on another host, then application-layer data can flow from Process A to
+Process B at the same time as application-layer data flows from Process B to Process A.
+
+A TCP connection is also always **point-to-point**, that is, between a single sender and a single receiver. So- called “multicasting” (see the online supplementary materials for this text)—the transfer of data from one sender to many receivers in a single send operation—is not possible with TCP.
+
+Both Ethernet and PPP link-layer protocols have an MTU of 1,500 bytes. Thus a typical value of MSS is 1460 bytes.
