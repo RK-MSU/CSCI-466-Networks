@@ -222,6 +222,7 @@ The window size must be less than or equal to half the size of the sequence numb
 
 ### Summary of reliable data transfer mechanisms and their use
 
+| | |
 | :-- | :-- |
 | Mechanism | Use, Comments |
 | Checksum  | Used to detect bit errors in a transmitted packet. Timer Used to timeout/retransmit a packet, possibly because the packet (or its ACK) was lost within the channel. Because timeouts can occur when a packet is delayed but not lost (premature timeout), or when a packet has been received by the receiver but the receiver-to-sender ACK has been lost, duplicate copies of a packet may be received by a receiver. |

@@ -263,7 +263,18 @@ With DASH, each video version is stored in the HTTP server, each with a differen
 
 ## 2.7 Socket Programming: Creating Network Applications
 
-UDPClient.py
+We’ll use the following simple client-server application to demonstrate socket programming for both UDP and TCP:
+
+1. The client reads a line of characters (data) from its keyboard and sends the data to the server.
+2. The server receives the data and converts the characters to uppercase.
+3. The server sends the modified data to the client.
+4. The client receives the modified data and displays the line on its screen.
+
+### Socket Programming with UDP
+
+![Figure 2.27 The client-server application using UDP](images/fig-2.27.png)
+
+#### UDPClient.py
 
 ```python
 from socket import *
@@ -281,7 +292,7 @@ clientSocket.close()
   - `AF_INET` indicates that the underlying network is using IPv4
   - The second parameter indicates that the socket is of type `SOCK_DGRAM`, which means it is a UDP socket (rather than a TCP socket)
 
-UDPServer.py
+#### UDPServer.py
 
 ```python
 from socket import *
@@ -293,4 +304,42 @@ while True:
   message, clientAddress = serverSocket.recvfrom(2048)
   modifiedMessage = message.decode().upper()
   serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+```
+
+### Socket Programming with TCP
+
+![Figure 2.28 The TCPServer process has two sockets](images/fig-2.28.png)
+
+![Figure 2.29 The client-server application using TCP](images/fig-2.29.png)
+
+#### TCPClient.py
+
+```python
+from socket import *
+serverName = ’servername’
+serverPort = 12000
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.connect((serverName, serverPort))
+sentence = raw_input(’Input lowercase sentence:’)
+clientSocket.send(sentence.encode())
+modifiedSentence = clientSocket.recv(1024)
+print(’From Server: ’, modifiedSentence.decode())
+clientSocket.close()
+```
+
+#### TCPServer.py
+
+```python
+from socket import *
+serverPort = 12000
+serverSocket = socket(AF_INET, SOCK_STREAM)
+serverSocket.bind((’’, serverPort))
+serverSocket.listen(1)
+print(’The server is ready to receive’)
+while True:
+  connectionSocket, addr = serverSocket.accept()
+  sentence = connectionSocket.recv(1024).decode()
+  capitalizedSentence = sentence.upper()
+  connectionSocket.send(capitalizedSentence.encode())
+  connectionSocket.close()
 ```
