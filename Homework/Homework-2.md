@@ -123,4 +123,4 @@ The ssthresh would be set to: 21
 
 ### Again suppose TCP Tahoe is used, and there is a timeout event at 22nd round. How many packets have been sent out from 17th round till 22nd round, inclusive?
 
-From the 17th transmission round to the 22nd transmission round, (assuming TCP Tahoe), 52 packets were sent inclusively.
+From the 17th transmission round to the 22nd transmission round, (assuming TCP Tahoe), 53 packets were sent inclusively.
