@@ -2,3 +2,85 @@ River Kelly
 Lab 2 - TCP
 CSCI-466: Networks
 October 8, 2021
+
+
+Lab Question 3:
+---------------------------------------
+What implementation of TCP is being used by your computer? How do you know?
+
+My computer is using IPv4.
+I know this by running the command: lsof -iTCP -sTCP:LISTEN
+
+
+WireShark TCP Lab:
+---------------------------------------
+
+1)  (tcp-ethereal-trace-1)
+    IP Address: 192.168.1.102
+    Port: 1161
+
+2)  (tcp-ethereal-trace-1)
+    IP Address: 128.119.245.12
+    Port: 80
+
+3)  (my computer)
+    IP Address: 100.64.12.20
+    Port: 46174
+
+4)  The TCP SYN segment sequence number used to initiate the TCP connection: 0
+    Segment that identifies the segment as a SYN: 1
+
+5)  Sequence Number: 0
+    SYN ACK: 1
+
+6)  The sequence number of the TCP segment containing the HTTP POST command is: 1
+
+7)  First 6 segments:
+
+|---------|------------|------------|--------------|------------|
+| Segment | Sequence # | Time Sent  | ACK Received | RTT        |
+|---------|------------|------------|--------------|------------|
+| 1       | 1          | .293263011 | .383704883   | .090441872 |
+| 2       | 701        | .293297256 | .385106157   | .091808901 |
+| 3       | 2149       | .293297945 | .385106361   | .091808416 |
+| 4       | 3597       | .293324235 | .385106681   | .091782446 |
+| 5       | 5045       | .293324923 | .385106701   | .091781778 |
+| 6       | 6493       | .293354693 | .385106757   | .091752064 |
+|---------|------------|------------|--------------|------------|
+
+
+EstimatedRTT: EstimatedRTT = 0.875 ⋅ EstimatedRTT + 0.125 ⋅ SampleRTT
+
+    1 - .090441872
+    2 - .875 * .090441872 + .125 * .091808901       = .09061275062
+    3 - .875 * .09061275062 + .125 * .091808416     = .09076220879
+    4 - .875 * .09076220879 + .125 * .091782446     = .09088973844
+    5 - .875 * .09088973844 + .125 * .091781778     = .09100124338
+    6 - .875 * .09100124338 + .125 * .091752064     = .09109509595
+
+8)  The length of the first segment is: 700
+    The length of the next five segments is: 1448
+
+9)  Minimum amount of available buffer space advertised at the received for the entire trace: 64256
+    At no point does this throttle the sender
+
+10) There were no retransmitted segments in the trace file.
+    To find this info: In the Time Sequence-Graph (Stevens) of this trace, all sequence numbers from the source to the destination are increasing with respect to time.
+
+11) The receiver acknowledge in an ACK the same amount of data sent in the originating message. There was no case in which the received ACK for another transmitted segment.
+ 
+12) Throughput (bytes transferred per unit time) for the TCP connection: 412730.854078 bytes/second
+
+    Size of alice.txt: 152,138 bytes
+    Time diff between first segments and last ACK: .661876112 - .293263011 = .368613101
+    152,138 / .368613101 = 412730.854078 bytes/second 
+
+13) TCP’s slowstart phase begins and ends: 0.885 seconds to 0.977 seconds.
+    Congestion avoidance takes over: 0.977 seconds to 1.162 seconds
+
+14) I used my own trace, so I will answer two questions using the tcp-ethereal-trace-1.
+
+Question 8) HTTP POST segment: 565 bytes
+            Next five TCP segments: 1460 bytes
+
+Question 9) The minimum amount of buffer space: 5840 bytes. The sender is never throttled.
