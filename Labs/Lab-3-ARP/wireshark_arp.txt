@@ -1,0 +1,60 @@
+River Kelly
+Lab 3 - Ethernet and ARP
+CSCI-466: Networks
+November 4, 2021
+
+
+Note: I completed this lab using the provide wireshark traces: ethernet--ethereal-trace-1
+
+
+
+Wireshark Lab 1-4 (4 points)
+----------------------------------------
+
+1. 	Ethernet address: 00:d0:59:a9:3d:68
+
+2.	Destination address: 00:06:25:da:af:73
+		This is not the ethernet address of gaia.cs.umass.edu, this is the address used by the local router in the subnet
+
+3.	hexadecimal value: 0x0800
+		Upper layer protocol: IP protocol
+
+4.	ASCII “G” bytes in GET: 52 bytes
+		14 B ethernet frame and 20 bytes of IP header
+		20 bytes of TCP header
+
+Wireshark Lab 12-15 (9 points)
+----------------------------------------
+
+12.
+	a.	ARP opcode field: 20 bytes
+	b. 	hex value: 0x0001
+	c.	ARP message does contain the IP address of the sender, which is: 192.168.1.105
+	d.	The "question" appears in the 'Target MAC address'. Which is set to 00:00:00:00:00:00 where it questions the machine corresponding to the query.
+
+13.
+	a.	ARP opcode: 20 bytes
+	b.	hex value: 0x0002
+	c.	The "question" appears in the 'Sender MAC address', which contains ethernet address 00:06:25:da:af:73, and IP address 199.2.53.206
+
+14. hexadecimal values source address: 00:06:25:da:af:73
+		hexadecimal values destination address: 00:d0:59:a9:3d:68
+
+15.	ARP requests are broadcast, therefore the reply is sent back to the sender ethernet address. The trace does not hava a reply. This is because we did not send the request.
+
+
+Lab Question 2.c (2 points)
+----------------------------------------
+Why is an ARP query sent within a broadcast frame? Why is an ARP response sent within a frame with a specific destination MAC address?
+
+	The coresponding adapter address to IP address in question is not known by the query host, this is why an ARP query is sent in a broadcast frame.
+
+	The response does know the adapter address (i.e. it is responding to it). Each node on the LAN processes this, therefore there is no need for the response to send a broadcast frame.
+
+Lab Question 2.d (1 point)
+----------------------------------------
+What is the default amount of time that an entry remains in your ARP cache before being removed. You can determine this empirically (by monitoring the cache contents), or by looking this up in your operation system documentation. Indicate how/where you determined this value.
+
+	I am currently running Ubuntu, and the default amount of time an entry remains in my ARP cache before being removed is: 60 seconds.
+
+	I found this by entering the following command: cat /proc/sys/net/ipv4/neigh/default/gc_stale_time
