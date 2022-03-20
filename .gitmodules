@@ -1,0 +1,12 @@
+[submodule "PA1-Rock-Paper-Scissors"]
+	path = PA1-Rock-Paper-Scissors
+	url = git@github.com:RK-MSU/CSCI-466-PA1-Rock-Paper-Scissors.git
+	branch = master
+[submodule "PA2-Reliable-Data-Transmission-RDT"]
+	path = PA2-Reliable-Data-Transmission-RDT
+	url = git@github.com:RK-MSU/CSCI-466-PA2-Reliable-Data-Transmission-RDT.git
+	branch = master
+[submodule "PA3-Network-Layer-Data-Plane"]
+	path = PA3-Network-Layer-Data-Plane
+	url = git@github.com:RK-MSU/CSCI-466-PA3-Network-Layer-Data-Plane.git
+	branch = master
